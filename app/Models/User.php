@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class User extends Authenticatable
 {
@@ -76,19 +77,51 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
+
+
     /**
      * @return HasMany
      */
-    public function orders(): HasMany
+
+    /* The user who reviews*/
+    public function reviewers(): HasMany
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Review::class, 'reviewer_id', 'id');
     }
 
     /**
      * @return HasMany
      */
-    public function reviews(): HasMany
+
+    /* The user who recieves the reviews*/
+    public function owners(): HasMany
     {
-        return $this->hasMany(Review::class);
+        return $this->hasMany(Review::class, 'user_id', 'id');
+    }
+
+    /**
+     * Get all of the user's report.
+     */
+    public function reports()
+    {
+        return $this->morphMany(Report::class, 'reportable');
+    }
+
+
+    /**
+     * Get all of the user's attachments.
+     */
+    public function attachments()
+    {
+        return $this->morphMany(Attachment::class, 'attachable');
+    }
+
+
+    /**
+     * Get all of the user's metadata.
+     */
+    public function metadata()
+    {
+        return $this->morphMany(Metadata::class, 'extended');
     }
 }

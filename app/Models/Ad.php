@@ -29,13 +29,6 @@ class Ad extends Model
         return $this->hasMany(Comment::class);
     }
 
-    /**
-     * @return HasMany
-     */
-    public function orders(): HasMany
-    {
-        return $this->hasMany(Order::class);
-    }
 
 
 
@@ -45,5 +38,32 @@ class Ad extends Model
     public function taxonomies(): BelongsToMany
     {
         return $this->belongsToMany(Taxonomy::class);
+    }
+
+
+    /**
+     * Get all of the user's report.
+     */
+    public function reports()
+    {
+        return $this->morphMany(Report::class, 'reportable');
+    }
+
+
+    /**
+     * Get all of the user's attachments.
+     */
+    public function attachments()
+    {
+        return $this->morphMany(Attachment::class, 'attachable');
+    }
+
+
+    /**
+     * Get all of the user's metadata.
+     */
+    public function metadata()
+    {
+        return $this->morphMany(Metadata::class, 'extended');
     }
 }

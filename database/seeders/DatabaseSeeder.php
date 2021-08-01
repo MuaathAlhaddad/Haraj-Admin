@@ -19,9 +19,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AdSeeder::class,
             CommentSeeder::class,
-            OrderSeeder::class,
             MessageSeeder::class,
             ReviewSeeder::class,
+            TaxonomySeeder::class,
+            Taxonomy_contentSeeder::class,
 
         ]);
     }

@@ -14,7 +14,7 @@ class State extends Model
 
     protected $guarded = [];
     /************************
-    *        Relations
+     *        Relations
      ************************/
     /**
      * @return BelongsTo

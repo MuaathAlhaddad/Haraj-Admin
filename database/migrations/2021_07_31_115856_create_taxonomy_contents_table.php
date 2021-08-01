@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTaxonomiesTable extends Migration
+class CreateTaxonomyContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateTaxonomiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('taxonomies', function (Blueprint $table) {
+        Schema::create('taxonomy_contents', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['tags', 'brands', 'categories', 'types'])->nullable();
-            $table->integer('parent');
-            $table->integer('sort');
+            $table->string('title');
+            $table->string('description');
+            $table->foreignId('taxonomy_id')->constrained('taxonomies');
             $table->dateTime('published_at')->nullable();
-            $table->index('type');
+            $table->string('lang')->nullable();
+            $table->index('taxonomy_id');
         });
     }
 
@@ -30,6 +31,6 @@ class CreateTaxonomiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taxonomies');
+        Schema::dropIfExists('taxonomy_contents');
     }
 }
