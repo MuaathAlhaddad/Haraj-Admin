@@ -84,8 +84,8 @@ class User extends Authenticatable
      * @return HasMany
      */
 
-    /* The user who reviews*/
-    public function reviewers(): HasMany
+    /* The user who creates a review */
+    public function reviewer(): HasMany
     {
         return $this->hasMany(Review::class, 'reviewer_id', 'id');
     }
@@ -94,8 +94,8 @@ class User extends Authenticatable
      * @return HasMany
      */
 
-    /* The user who recieves the reviews*/
-    public function owners(): HasMany
+    /* The user who receives a review */
+    public function reviewee(): HasMany
     {
         return $this->hasMany(Review::class, 'user_id', 'id');
     }
