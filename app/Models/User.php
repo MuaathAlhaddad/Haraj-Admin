@@ -20,6 +20,18 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $fillable = [
+         'name',
+         'email',
+         'password',
+         'phone_no',
+         'gender',
+         'confirmed_at',
+         'country_id',
+         'state_id',
+         'email',
+         'phone_no'
+    ];
 
 
     /**
@@ -45,13 +57,28 @@ class User extends Authenticatable
      *        Relations
      ************************/
     /**
+     * Get all user's Ads
+     *
+     * @return HasMany
+     */
+    public function ads(): HasMany
+    {
+        return $this->hasMany(Ad::class);
+    }
+
+    /**
+     * Get the user's country
+     *
      * @return BelongsTo
      */
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
     }
+
     /**
+     * Get the user's state
+     *
      * @return BelongsTo
      */
     public function state(): BelongsTo
@@ -59,9 +86,9 @@ class User extends Authenticatable
         return $this->belongsTo(State::class);
     }
 
-
-
     /**
+     * Get the user's messages
+     *
      * @return HasMany
      */
     public function messages(): HasMany
@@ -69,8 +96,9 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
-
     /**
+     * Get the user's comments
+     *
      * @return HasMany
      */
     public function comments(): HasMany
@@ -78,23 +106,21 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-
-
     /**
+     * Get the user who creates the review
+     *
      * @return HasMany
      */
-
-    /* The user who creates a review */
     public function reviewer(): HasMany
     {
         return $this->hasMany(Review::class, 'reviewer_id', 'id');
     }
 
     /**
+     * Get the user who receives the review
+     *
      * @return HasMany
      */
-
-    /* The user who receives a review */
     public function reviewee(): HasMany
     {
         return $this->hasMany(Review::class, 'user_id', 'id');
