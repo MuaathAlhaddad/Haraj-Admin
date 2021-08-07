@@ -24,6 +24,7 @@ class CreateAdsTable extends Migration
             $table->boolean('negotiable')->nullable();
             $table->enum('status', ['draft', 'pending', 'unpublished', 'published', 'sold'])->nullable();
             $table->boolean('warranty')->nullable();
+            $table->softDeletes();
             $table->boolean('favorited')->nullable();
             $table->index(['user_id', 'status', 'favorited', 'sku']);
             $table->timestamps();

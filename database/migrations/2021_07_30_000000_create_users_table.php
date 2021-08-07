@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->dateTime('confirmed_at')->nullable();
             $table->foreignId('country_id')->constrained('countries');
             $table->foreignId('state_id')->constrained('states');
+            $table->softDeletes();
             $table->index(['email', 'phone_no']);
             $table->rememberToken();
             $table->timestamps();

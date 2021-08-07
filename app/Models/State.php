@@ -23,7 +23,16 @@ class State extends Model
     {
         return $this->belongsTo(Country::class);
     }
+
     /**
+    * @return BelongsTo
+     */
+    public function state(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+    /**
+    
      * @return HasMany
      */
     public function users(): HasMany

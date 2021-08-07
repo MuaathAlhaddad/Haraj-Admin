@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Traits\AttachableTrait;
+use App\Traits\MetadataTrait;
 use App\Traits\ReportableTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,10 +12,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, ReportableTrait;
+    use HasFactory, Notifiable, SoftDeletes, ReportableTrait, AttachableTrait, MetadataTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -32,7 +35,6 @@ class User extends Authenticatable
          'email',
          'phone_no'
     ];
-
 
     /**
      * The attributes that should be hidden for arrays.
@@ -107,41 +109,13 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the user who creates the review
+     * Get the user's comments
      *
      * @return HasMany
      */
-    public function reviewer(): HasMany
+    public function reviews(): HasMany
     {
-        return $this->hasMany(Review::class, 'reviewer_id', 'id');
+        return $this->hasMany(Review::class);
     }
 
-    /**
-     * Get the user who receives the review
-     *
-     * @return HasMany
-     */
-    public function reviewee(): HasMany
-    {
-        return $this->hasMany(Review::class, 'user_id', 'id');
-    }
-
-
-
-    /**
-     * Get all of the user's attachments.
-     */
-    public function attachments()
-    {
-        return $this->morphMany(Attachment::class, 'attachable');
-    }
-
-
-    /**
-     * Get all of the user's metadata.
-     */
-    public function metadata()
-    {
-        return $this->morphMany(Metadata::class, 'extended');
-    }
 }
