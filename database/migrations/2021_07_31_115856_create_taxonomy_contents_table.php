@@ -16,11 +16,12 @@ class CreateTaxonomyContentsTable extends Migration
         Schema::create('taxonomy_contents', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->foreignId('taxonomy_id')->constrained('taxonomies');
             $table->dateTime('published_at')->nullable();
             $table->softDeletes();
             $table->string('lang')->nullable();
+            $table->timestamps();
             $table->index('taxonomy_id');
         });
     }

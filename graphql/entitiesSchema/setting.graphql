@@ -1,0 +1,18 @@
+extend type Query {
+    settings(orderBy: _ @orderBy(columnsEnum: "SettingColumns")): [Setting!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    setting(id: ID @eq): Setting @find
+}
+
+type Setting{
+    id: ID!
+    key: String!
+    value: Int!
+    notes: String
+    display_name: String!
+    domain: String!
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+}
+

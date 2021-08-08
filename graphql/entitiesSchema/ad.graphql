@@ -1,0 +1,27 @@
+extend type Query {
+    ads(orderBy: _ @orderBy(columnsEnum: "AdColumns")): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    ad(id: ID @eq): Ad @find
+}
+
+type Ad{
+    id: ID!
+    sku: String!
+    name: String!
+    description: String
+    price: Float!
+    quantity: Int!
+    negotiable: Int
+    status: Int
+    warranty: Int
+    favorited: Int
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    taxonomies: [Taxonomy!]! @belongsToMany(type: PAGINATOR, defaultCount: 10)
+    reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

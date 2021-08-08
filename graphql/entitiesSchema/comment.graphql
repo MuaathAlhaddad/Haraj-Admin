@@ -1,0 +1,16 @@
+extend type Query {
+    comments(orderBy: _ @orderBy(columnsEnum: "CommentColumns")): [Comment!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    comment(id: ID @eq): Comment @find
+}
+
+type Comment{
+    id: ID!
+    body: String!
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    ad: Ad @belongsTo
+    reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}

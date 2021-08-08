@@ -17,10 +17,22 @@ class Message extends Model
 
 
     /**
+     * Get the message's sender
+     *
      * @return BelongsTo
      */
-    public function user(): BelongsTo
+    public function sender(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'from_id', 'id');
+    }
+
+    /**
+     * Get the message's recipient
+     *
+     * @return BelongsTo
+     */
+    public function recipient(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'to_id', 'id');
     }
 }

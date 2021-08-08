@@ -17,7 +17,7 @@ class CreateCountriesTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->integer('phonecode');
+            $table->integer('phone_code');
         });
     }
 

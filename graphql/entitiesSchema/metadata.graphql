@@ -1,0 +1,19 @@
+extend type Query {
+    metadatas(orderBy: _ @orderBy(columnsEnum: "MetadataColumns")): [Metadata!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    metadata(id: ID @eq): Metadata @find
+}
+
+type Metadata{
+    id: ID!
+    key: String!
+    value: String!
+    extended_id: Int!
+    extended_type: String!
+    type: String!
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    extended: Extended! @morphTo
+}
+union Extended = Ad | User

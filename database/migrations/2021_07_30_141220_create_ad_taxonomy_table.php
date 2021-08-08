@@ -17,6 +17,7 @@ class CreateAdTaxonomyTable extends Migration
             $table->id();
             $table->foreignId('ad_id')->constrained('ads');
             $table->foreignId('taxonomy_id')->constrained('taxonomies');
+            $table->timestamps();
             $table->index(['ad_id', 'taxonomy_id']);
         });
     }
