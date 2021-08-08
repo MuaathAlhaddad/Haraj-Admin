@@ -4,7 +4,8 @@
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
-scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+scalar DateTime
+    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 enum AdStatus {
     DRAFT @enum(value: 0)
@@ -78,11 +79,11 @@ enum ReviewColumns {
     UPDATED_AT
 }
 enum ReviewStar {
-1
-2
-3
-4
-5
+    STAR1
+    STAR2
+    STAR3
+    STAR4
+    STAR5
 }
 ###################( Message )############################
 enum MessageColumns {
@@ -187,4 +188,3 @@ enum TaxonomyContentColumns {
 # Taxonomy
 # Taxonomy_content
 # TODO: User
-
