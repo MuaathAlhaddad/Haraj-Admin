@@ -29,8 +29,8 @@ class Taxonomy extends Model
      * get the taxonomy contents of a taxonomy
      * @return HasMany
      */
-    public function taxonomy_contents(): HasMany
+    public function contents(): HasMany
     {
-        return $this->hasMany(Taxonomy_Content::class);
+        return $this->hasMany(TaxonomyContent::class);
     }
 }
