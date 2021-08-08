@@ -18,9 +18,9 @@ class CreateTaxonomyContentsTable extends Migration
             $table->string('title');
             $table->string('description')->nullable();
             $table->foreignId('taxonomy_id')->constrained('taxonomies');
+            $table->string('lang')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->softDeletes();
-            $table->string('lang')->nullable();
             $table->timestamps();
             $table->index('taxonomy_id');
         });

@@ -18,8 +18,8 @@ class CreateReportsTable extends Migration
             $table->string('name');
             $table->integer('reportable_id');
             $table->string('reportable_type');
-            $table->softDeletes();
             $table->enum('type', ["comment, ad, user, review"]);
+            $table->softDeletes();
             $table->timestamps();
             $table->index(['reportable_id', 'reportable_type']);
         });

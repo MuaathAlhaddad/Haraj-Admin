@@ -19,10 +19,10 @@ class CreateSettingsTable extends Migration
             $table->string('value');
             $table->string('notes')->nullable();
             $table->string('display_name');
-            $table->softDeletes();
             $table->enum('domain', ['auth', 'api', 'recaptcha', 'style']);
-            $table->index(['key', 'domain']);
+            $table->softDeletes();
             $table->timestamps();
+            $table->index(['key', 'domain']);
         });
     }
 

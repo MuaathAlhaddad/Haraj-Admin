@@ -21,13 +21,13 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('phone_no')->unique();
             $table->enum('gender', ['f', 'm'])->nullable();
-            $table->dateTime('confirmed_at')->nullable();
             $table->foreignId('country_id')->constrained('countries');
             $table->foreignId('state_id')->constrained('states');
-            $table->index(['email', 'phone_no']);
             $table->rememberToken();
-            $table->timestamps();
+            $table->dateTime('confirmed_at')->nullable();
             $table->softDeletes();
+            $table->timestamps();
+            $table->index(['email', 'phone_no']);
         });
     }
 

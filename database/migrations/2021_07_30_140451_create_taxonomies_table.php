@@ -18,8 +18,8 @@ class CreateTaxonomiesTable extends Migration
             $table->enum('type', ['tags', 'brands', 'categories', 'types']);
             $table->integer('parent')->nullable();
             $table->integer('sort')->nullable();
-            $table->softDeletes();
             $table->dateTime('published_at')->nullable();
+            $table->softDeletes();
             $table->timestamps();
             $table->index('type');
         });

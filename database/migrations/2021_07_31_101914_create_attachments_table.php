@@ -21,8 +21,8 @@ class CreateAttachmentsTable extends Migration
             $table->string('path');
             $table->string('disk_name')->nullable();
             $table->string('file_name');
+            $table->boolean('thumbnail')->nullable();                                                           
             $table->softDeletes();
-            $table->boolean('thumbnail')->nullable();
             $table->timestamps();
             $table->index(['attachable_id', 'attachable_type']);
         });

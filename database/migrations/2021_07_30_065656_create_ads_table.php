@@ -21,13 +21,13 @@ class CreateAdsTable extends Migration
             $table->float('price');
             $table->integer('quantity');
             $table->foreignId('user_id')->constrained('users');
-            $table->boolean('negotiable')->nullable();
-            $table->enum('status', ['draft', 'pending', 'unpublished', 'published', 'sold'])->nullable();
             $table->boolean('warranty')->nullable();
-            $table->softDeletes();
             $table->boolean('favorited')->nullable();
-            $table->index(['user_id', 'status', 'favorited', 'sku']);
+            $table->boolean('negotiable')->nullable();
+            $table->enum('status', ['draft', 'pending', 'unpublished', 'published', 'sold']);
+            $table->softDeletes();
             $table->timestamps();
+            $table->index(['user_id', 'status', 'favorited', 'sku']);
         });
     }
 
