@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ad extends Model
 {
 
-     use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes;
+    use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes;
 
     protected $fillable = [
         'name',

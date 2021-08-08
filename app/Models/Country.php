@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Country extends Model
 {
@@ -19,13 +18,17 @@ class Country extends Model
      *        Relations
      ************************/
     /**
-     * @return HasMany
+     
+     *Get the country's states
+     *  @return HasMany
      */
     public function states(): HasMany
     {
         return $this->hasMany(State::class, 'country_id', 'id');
     }
+
     /**
+     *Get the country's users
      * @return HasMany
      */
     public function users(): HasMany

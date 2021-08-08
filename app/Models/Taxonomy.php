@@ -11,8 +11,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Taxonomy extends Model
 {
     use HasFactory, SoftDeletes;
-    
+
+    /************************
+     *        Relations
+     ************************/
+
     /**
+     * Get the taxonomy's ads
      * @return BelongsToMany
      */
     public function ads(): BelongsToMany
@@ -20,12 +25,12 @@ class Taxonomy extends Model
         return $this->belongsToMany(Ad::class);
     }
 
-
     /**
+     * get the taxonomy contents of a taxonomy
      * @return HasMany
      */
     public function taxonomy_contents(): HasMany
     {
-        return $this->hasMany(Taxonomy_content::class);
+        return $this->hasMany(Taxonomy_Content::class);
     }
 }

@@ -21,6 +21,7 @@ class Comment extends Model
      ********************************/
 
     /**
+     * Get the comment's user
      * @return BelongsTo
      */
     public function user(): BelongsTo
@@ -29,6 +30,7 @@ class Comment extends Model
     }
 
     /**
+     * Get the ad's comment
      * @return BelongsTo
      */
     public function ad(): BelongsTo

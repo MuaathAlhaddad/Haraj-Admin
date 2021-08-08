@@ -13,10 +13,13 @@ class State extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
     /************************
      *        Relations
      ************************/
     /**
+
+     * Get the state's country
      * @return BelongsTo
      */
     public function country(): BelongsTo
@@ -25,14 +28,7 @@ class State extends Model
     }
 
     /**
-    * @return BelongsTo
-     */
-    public function state(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-    /**
-    
+     * Get state's users    
      * @return HasMany
      */
     public function users(): HasMany
