@@ -5,11 +5,12 @@ namespace App\Traits;
 
 
 use App\Models\Report;
-
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 Trait ReportableTrait
 {
     /**
-     * Get all of the resource's reports.
+     * Get all the user's reports.
+     * @return MorphMany
      */
     public function reports()
     {

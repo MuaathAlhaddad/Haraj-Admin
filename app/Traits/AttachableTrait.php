@@ -4,15 +4,17 @@
 namespace App\Traits;
 
 use App\Models\Attachment;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 Trait AttachableTrait
 {
     /**
-     * Get all of the resource's reports.
+     * Get all the resource's reports.
+     * @return MorphMany
      */
     public function attachments()
     {
-        return $this->morphMany(Attachment::class, 'attachable');
+    return $this->morphMany(Attachment::class, 'attachable');
     }
 
 }

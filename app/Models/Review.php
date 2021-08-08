@@ -16,7 +16,11 @@ class Review extends Model
     protected $fillable = [
         'body',
     ];
-
+    
+    /**********************************
+     *           Relations
+     ********************************/
+      
     /**
      * Get the user who creates the review
      *

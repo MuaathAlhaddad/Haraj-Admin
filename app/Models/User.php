@@ -5,13 +5,11 @@ namespace App\Models;
 use App\Traits\AttachableTrait;
 use App\Traits\MetadataTrait;
 use App\Traits\ReportableTrait;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
@@ -59,6 +57,7 @@ class User extends Authenticatable
      *        Relations
      ************************/
     /**
+     
      * Get all user's Ads
      *
      * @return HasMany
@@ -109,7 +108,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the user's comments
+     * Get the user's reviews
      *
      * @return HasMany
      */
