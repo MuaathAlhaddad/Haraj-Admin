@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->text('body')->nullable();
-            $table->foreignId('reviewable_id')->constrained('users');
+            $table->foreignId('reviewer_id')->constrained('users');
             $table->foreignId('user_id')->constrained('users');
             $table->softDeletes();
             $table->enum('star', [1, 2, 3, 4, 5])->nullable();

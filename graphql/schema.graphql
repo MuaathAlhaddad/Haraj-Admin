@@ -1,39 +1,10 @@
+#import entitiesSchema/*.graphql
+
 "A date string with format `Y-m-d`, e.g. `2011-05-23`."
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
-scalar DateTime
-    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
-
-type Query {
-    users: [User] @all
-    user(id: ID @eq): User @find
-
-    ads: [Ad] @all
-
-    ad(id: ID @eq): Ad @find
-}
-
-type User {
-    id: ID!
-    name: String!
-    email: String!
-    created_at: DateTime!
-    updated_at: DateTime!
-}
-
-type Ad {
-    id: ID!
-    sku: Int!
-    name: String
-    description: String
-    price: Float
-    quantity: Int
-    negotiable: Boolean
-    status: AdStatus!
-    warranty: Boolean
-    favorited: Boolean
-}
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 enum AdStatus {
     DRAFT @enum(value: 0)
@@ -42,3 +13,178 @@ enum AdStatus {
     PUBLISHED @enum(value: 3)
     SOLD @enum(value: 4)
 }
+enum Gender {
+    MALE @enum(value: "m")
+    FEMALE @enum(value: "f")
+}
+###################( User )############################
+enum UserColumns {
+    ID
+    NAME
+    EMAIL
+    EMAIL_VERIFIED_AT
+    PASSWORD
+    PHONE_NO
+    GENDER
+    CONFIRMED_AT
+    REMEMBER_TOKEN
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Country )############################
+enum CountryColumns {
+    ID
+    CODE
+    NAME
+    PHONE_CODE
+}
+###################( State )############################
+enum StateColumns {
+    ID
+    NAME
+}
+###################( Ad )############################
+enum AdColumns {
+    ID
+    SKU
+    NAME
+    DESCRIPTION
+    PRICE
+    QUANTITY
+    NEGOTIABLE
+    STATUS
+    WARRANTY
+    FAVORITED
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Comment )############################
+enum CommentColumns {
+    ID
+    Body
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Review )############################
+enum ReviewColumns {
+    ID
+    BODY
+    STAR
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+enum ReviewStar {
+1
+2
+3
+4
+5
+}
+###################( Message )############################
+enum MessageColumns {
+    ID
+    BODY
+    SEEN_AT
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Attachment )############################
+enum AttachmentColumns {
+    ID
+    ATTACHABLE_ID
+    ATTACHABLE_TYPE
+    TYPE
+    PATH
+    DISK_NAME
+    FILE_NAME
+    THUMBNAIL
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+enum AttachmentTypes {
+    PHOTO
+    DOCUMENT
+    AUDIO
+    VIDEO
+    OTHER
+}
+###################( Metadata )############################
+enum MetadataColumns {
+    ID
+    ATTACHABLE_ID
+    ATTACHABLE_TYPE
+    TYPE
+    PATH
+    DISK_NAME
+    FILE_NAME
+    THUMBNAIL
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Report )############################
+enum ReportColumns {
+    ID
+    NAME
+    REPORTABLE_ID
+    REPORTABLE_TYPE
+    TYPE
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Setting )############################
+enum SettingColumns {
+    ID
+    KEY
+    VALUE
+    NOTES
+    DISPLAY_NAME
+    DOMAIN
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( Taxonomy )############################
+enum TaxonomyColumns {
+    ID
+    TYPE
+    PARENT
+    SORT
+    PUBLISHED_AT
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+###################( TaxonomyContent )############################
+enum TaxonomyContentColumns {
+    ID
+    TITLE
+    DESCRIPTION
+    LANG
+    PUBLISHED_AT
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
+
+# Ad
+# Attachment
+# Comment
+# Country
+# Message
+# Metadata
+# Report
+# Review
+# Setting
+# State
+# Taxonomy
+# Taxonomy_content
+# TODO: User
+

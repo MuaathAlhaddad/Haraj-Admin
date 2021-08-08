@@ -1,0 +1,21 @@
+extend type Query {
+    attachments(orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")): [Attachment!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    attachment(id: ID @eq): Attachment @find
+}
+
+type Attachment{
+    id: ID!
+    attachable_id: Int!
+    attachable_type: String!
+    type: String!
+    path: String!
+    disk_name: String
+    file_name: String!
+    thumbnail: Int
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    attachable: Attachable! @morphTo
+}
+union Attachable = Ad | User

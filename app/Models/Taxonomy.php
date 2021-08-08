@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Taxonomy extends Model
 {
     use HasFactory, SoftDeletes;
-    
+
     /************************
      *        Relations
      ************************/

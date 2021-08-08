@@ -1,0 +1,19 @@
+extend type Query {
+    taxonomies(orderBy: _ @orderBy(columnsEnum: "TaxonomyColumns")): [Taxonomy!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    taxonomy(id: ID @eq): Taxonomy @find
+}
+
+type Taxonomy {
+    id: ID!
+    type: String!
+    parent: String
+    sort: Int
+    published_at: DateTime
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    user: User @belongsTo
+    contents: [TaxonomyContent!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    ads: [Ad!]! @belongsToMany(type: PAGINATOR, defaultCount: 10)
+}

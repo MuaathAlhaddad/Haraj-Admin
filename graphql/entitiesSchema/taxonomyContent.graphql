@@ -1,0 +1,17 @@
+extend type Query {
+    taxonomyContents(orderBy: _ @orderBy(columnsEnum: "TaxonomyContentColumns")): [TaxonomyContent!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    taxonomyContent(id: ID @eq): TaxonomyContent @find
+}
+
+type TaxonomyContent {
+    id: ID!
+    title: String!
+    description: String
+    lang: String
+    published_at: DateTime
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    taxonomy: Taxonomy @belongsTo
+}

@@ -19,8 +19,9 @@ class CreateMetadataTable extends Migration
             $table->string('value');
             $table->integer('extended_id');
             $table->string('extended_type');
-            $table->softDeletes();
             $table->enum('type', ["question, note"]);
+            $table->softDeletes();
+            $table->timestamps();
             $table->index(['extended_id', 'extended_type']);
         });
     }

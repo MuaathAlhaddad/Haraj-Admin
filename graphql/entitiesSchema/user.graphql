@@ -1,0 +1,29 @@
+extend type Query {
+    users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]! @paginate(type: PAGINATOR, defaultCount: 10) @softDeletes
+
+    user(id: ID @eq): User @find @softDeletes
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    email_verified_at: DateTime
+    password: String!
+    phone_no: String!
+    gender: String
+    confirmed_at: DateTime
+    remember_token: String
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    ads: [Ad!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    country: Country @belongsTo
+    state: State @belongsTo
+    messages: [Message!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    reviews: [Review!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    metadata:  [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}
