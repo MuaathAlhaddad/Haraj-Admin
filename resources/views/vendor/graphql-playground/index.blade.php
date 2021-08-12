@@ -32,3 +32,9 @@
 
 </body>
 </html>
+<!-- TODO: 
+  - Making the date readable for the users
+  - Reviewer & Reviewee queries have an issue in the graphql-playground.
+  - Create username for a user
+  - Status attribute in the ads cannot be queried in graphql-playground
+-->
