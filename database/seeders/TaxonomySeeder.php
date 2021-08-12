@@ -19,8 +19,9 @@ class TaxonomySeeder extends Seeder
         $taxonomies = array(
             array('id' => 1, 'type' => 'harajs', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
             array('id' => 2, 'type' => 'brands', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
-            array('id' => 3, 'type' => 'tags', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
+            array('id' => 3, 'type' => 'types', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
             array('id' => 4, 'type' => 'models', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
+            array('id' =>5, 'type' => 'tags', 'parent' => null, 'published_at' => null, 'lang' => 'en'),
 
 //            array('id' => 2, 'type' => 'categories', 'parent' => null, 'level' => 1, 'published_at' => null, 'lang' => 'en'),
 

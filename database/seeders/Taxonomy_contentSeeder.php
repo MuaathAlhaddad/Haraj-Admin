@@ -20,19 +20,101 @@ class Taxonomy_contentSeeder extends Seeder
             array('title' => 'Cars', 'description' => "All ads about cars", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
             array('title' => 'Devices', 'description' => "All ads about Devices including electronics...", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
             array('title' => 'Real Estate', 'description' => "All ads that deals with the buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
+            array('title' => 'Furniture', 'description' => "All ads that deals with the buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
+ 
+ 
+ 
+             // brands - cars
+            array('title' =>'Toyota', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Ford' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Chevrolet' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Hyundai' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'mercedes', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Honda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'BMW', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'dodge', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>   'GMS', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Chrysler', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'pocket', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Mitsubishi', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Mazda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'land Rover', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Isuzu', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Cadillac', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Porsche', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Audi', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'suzuki', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'infinity', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Hummer' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Lincoln' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'volks' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'wagon', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Daihatsu' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>'jelly', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Mercury' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Volvo', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Peugeot', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Bentley' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Jaguar' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Subaru', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Changan', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'buick' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Maserati', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => ' Rolls-Royce' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Lamborghini', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Opel', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Skoda' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Ferrari', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'Citroen', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            array('title' =>  'cherry', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
+            
 
+             // brands - cars - types
+             array('title' => 'Land Cruiser', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'camry', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Avalon', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Hilux', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Corolla', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'NS', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Prado', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Orion', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'sequoia', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Bus', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Rav', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Innova', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Rav', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'eco', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Toyota 86', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
+             array('title' => 'Prius', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
 
-            // brands - cars
-            array('title' => 'Honda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Infiniti', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Lexus', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Mazda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Mitsubishi', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Nissan', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Subaru', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Suzuki', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Toyota', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-
+            // brands - cars - types-models
+            array('title' => '1996', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '1997', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '1998', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '1999', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2000', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2001', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2002', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2003', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2004', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2005', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2006', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2007', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2008', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2009', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2010', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2011', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2012', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2013', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2014', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2015', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2016', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2017', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2018', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2019', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2020', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => '2021', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
+ 
             //  brands - mobiles
             array('title' => 'acer', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
             array('title' => 'alcatel', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
@@ -217,8 +299,58 @@ class Taxonomy_contentSeeder extends Seeder
             array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
 
 
+            // Real Estate
+            array('title' => 'lands', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'for sale', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Apartments', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'For Rent', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Villas', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'for sale', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Apartments', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'houses', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Building', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'breaks', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Shops', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Villas', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Farmer', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'roles', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            
+            
+            
+            //Furniture
+            array('title' => 'Animals, livestock, and bird', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Personal Accessories', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Services', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Food and beverages', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Games and Entertainment', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Hunting and Trips', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Programming and designs', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Parties and events', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Library and Arts', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Travel and Tourism', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Uncategorized Section', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
+ 
 
-//
+
+            //Furniture-types(Animals, livestock, and birds)
+            array('title' => 'Sheep', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Parrot', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Pigeons', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Cats', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Chicken', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Goats', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Camels', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Horses', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Fish', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'turtles', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Rabbits', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Squirrels', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+            array('title' => 'Hyrax', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
+
+
+
+
+
 //            Samsung A12 Nacho
 //Samsung Galaxy M21 2021 Edition
 //Samsung Galaxy M21 2021 Edition
