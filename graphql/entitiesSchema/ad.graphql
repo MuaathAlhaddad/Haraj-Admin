@@ -1,3 +1,6 @@
+extend type Mutation {
+    createAd(input: CreateAdInput! @spread): Ad @create
+}
 extend type Query {
     ads(orderBy: _ @orderBy(columnsEnum: "AdColumns")): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -7,10 +10,9 @@ extend type Query {
 type Ad{
     id: ID!
     sku: String!
-    name: String!
+    title: String!
     description: String
     price: Float!
-    quantity: Int!
     negotiable: Int
     status: Int
     warranty: Int

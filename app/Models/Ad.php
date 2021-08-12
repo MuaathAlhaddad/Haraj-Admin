@@ -20,10 +20,9 @@ class Ad extends Model
     use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes;
 
     protected $fillable = [
-        'name',
+        'title',
         'description',
         'price',
-        'quantity',
         'negotiable'
     ];
 
