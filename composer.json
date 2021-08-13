@@ -12,7 +12,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "mll-lab/laravel-graphql-playground": "^2.5",
-        "nuwave/lighthouse": "^5.17"
+        "nuwave/lighthouse": "^5.17",
+        "twilio/sdk": "^6.28"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

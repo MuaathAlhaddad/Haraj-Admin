@@ -1,6 +1,6 @@
-extend type Mutation {
-    createAd(input: CreateAdInput! @spread): Ad @create
-}
+#extend type Mutation {
+##    createAd(input: CreateAdInput! @spread): Ad @create
+#}
 extend type Query {
     ads(orderBy: _ @orderBy(columnsEnum: "AdColumns")): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
