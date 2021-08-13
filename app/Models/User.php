@@ -27,7 +27,7 @@ class User extends Authenticatable
          'password',
          'phone_no',
          'gender',
-         'confirmed_at',
+         'phone_verified_at',
          'country_id',
          'state_id',
          'email',
@@ -57,7 +57,7 @@ class User extends Authenticatable
      *        Relations
      ************************/
     /**
-     
+
      * Get all user's Ads
      *
      * @return HasMany
