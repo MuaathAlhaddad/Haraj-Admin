@@ -1,3 +1,13 @@
+extend type Mutation {
+    createUser(phone_no: String!, country_id: Int!): User
+    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
+
+    verifyPhoneNumber(verification_code: Int!, phone_no: String! ): String
+    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyPhoneNumber")
+
+
+}
+
 extend type Query {
     users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]! @paginate(type: PAGINATOR, defaultCount: 10) @softDeletes
 
