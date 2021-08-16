@@ -16,577 +16,401 @@ class Taxonomy_contentSeeder extends Seeder
     {
         DB::table('taxonomy_contents')->delete();
         $taxonomy_contents = array(
-            //    harajs
-            array('title' => 'Cars', 'description' => "All ads about cars", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Devices', 'description' => "All ads about Devices including electronics...", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
-            array('title' => 'Real Estate', 'description' => "All ads that deals with the buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
-            array('title' => 'Furniture', 'description' => "All ads that deals with the buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => null),
- 
- 
- 
-             // brands - cars
-            array('title' =>'Toyota', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Ford' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Chevrolet' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Hyundai' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'mercedes', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Honda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'BMW', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'dodge', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>   'GMS', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Chrysler', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'pocket', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Mitsubishi', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Mazda', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'land Rover', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Isuzu', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Cadillac', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Porsche', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Audi', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'suzuki', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'infinity', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Hummer' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Lincoln' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'volks' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'wagon', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Daihatsu' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>'jelly', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Mercury' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Volvo', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Peugeot', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Bentley' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Jaguar' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Subaru', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Changan', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'buick' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Maserati', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => ' Rolls-Royce' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Lamborghini', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Opel', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Skoda' , 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Ferrari', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'Citroen', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' =>  'cherry', 'description' => "automobile manufacturers of Japan", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            
-
-             // brands - cars - types
-             array('title' => 'Land Cruiser', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'camry', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Avalon', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Hilux', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Corolla', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'NS', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Prado', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Orion', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'sequoia', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Bus', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Rav', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Innova', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Rav', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'eco', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Toyota 86', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-             array('title' => 'Prius', 'description' => "Mobile Brands", 'taxonomy_id' => 3, 'parent_id' => 2, 'published_at' => null, 'lang' => 'en'),
-
-            // brands - cars - types-models
-            array('title' => '1996', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '1997', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '1998', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '1999', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2000', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2001', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2002', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2003', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2004', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2005', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2006', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2007', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2008', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2009', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2010', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2011', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2012', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2013', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2014', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2015', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2016', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2017', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2018', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2019', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2020', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => '2021', 'description' => "Mobile Brands", 'taxonomy_id' => 4, 'parent_id' => 3, 'published_at' => null, 'lang' => 'en'),
- 
-            //  brands - mobiles
-            array('title' => 'acer', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'alcatel', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'allview', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'amazon', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'amoi', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'apple', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'archos', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'asus', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'at&t', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'benefon', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'benq', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'benq-siemens', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'bird', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'blackberry', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'blackview', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'blu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'bosch', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'bq', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'casio', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'cat', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'celkon', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'chea', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'coolpad', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'dell', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'emporia', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'energizer', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'ericsson', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'eten', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'fairphone', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'fujitsu siemens', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'garmin-asus', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'gigabyte', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'gionee', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'google', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'haier', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'honor', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'hp', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'htc', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'huawei', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'i-mate', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'i-mobile', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'icemobile', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'infinix', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'innostream', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'inq', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'intex', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'jolla', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'karbonn', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'kyocera', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'lava', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'leeco', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'lenovo', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'lg', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'maxon', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'maxwest', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'meizu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'micromax', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'microsoft', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'mitac', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'mitsubishi', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'modu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'motorola', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'mwg', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'nec', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'neonode', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'niu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'nokia', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'nvidia', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'o2', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'oneplus', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'oppo', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'orange', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'palm', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'panasonic', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'pantech', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'parla', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'philips', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'plum', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'posh', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'prestigio', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'qmobile', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'qtek', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'razer', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'realme', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sagem', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'samsung', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sendo', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sewon', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sharp', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'siemens', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sonim', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sony', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'sony ericsson', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'spice', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 't-mobile', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'tcl', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'tecno', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'tel.me.', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'telit', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'thuraya', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'toshiba', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'ulefone', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'unnecto', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'vertu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'verykool', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'vivo', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'vk mobile', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'vodafone', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'wiko', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'wnd', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'xcute', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'xiaomi', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'xolo', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'yezz', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'yota', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'yu', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'zte', 'description' => "Mobile Brands", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-
-            // models - mobile - apple
-            array('title' => 'iPhone 12 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 mini', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone SE (2020)', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone SE (2020)', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-
-            // models - mobile - apple
-            array('title' => 'iPhone 12 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12 mini', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 12', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone SE (2020)', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone SE (2020)', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11 Pro Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'iPhone 11', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XR', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS Max', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone XS', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apple iPhone 8', 'description' => "Apple Brand", 'taxonomy_id' => 2, 'published_at' => null, 'lang' => 'en'),
-
-
-            // Real Estate
-            array('title' => 'lands', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'for sale', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apartments', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'For Rent', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Villas', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'for sale', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Apartments', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'houses', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Building', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'breaks', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Shops', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Villas', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Farmer', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'roles', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            
-            
-            
-            //Furniture
-            array('title' => 'Animals, livestock, and bird', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Personal Accessories', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Services', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Food and beverages', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Games and Entertainment', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Hunting and Trips', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Programming and designs', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Parties and events', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Library and Arts', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Travel and Tourism', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Uncategorized Section', 'description' => "Real Estate", 'taxonomy_id' => 1, 'published_at' => null, 'lang' => 'en'),
- 
-
-
-            //Furniture-types(Animals, livestock, and birds)
-            array('title' => 'Sheep', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Parrot', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Pigeons', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Cats', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Chicken', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Goats', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Camels', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Horses', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Fish', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'turtles', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Rabbits', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Squirrels', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'Hyrax', 'description' => "Furniture type", 'taxonomy_id' => 3, 'published_at' => null, 'lang' => 'en'),
-
-
-
-
-
-//            Samsung A12 Nacho
-//Samsung Galaxy M21 2021 Edition
-//Samsung Galaxy M21 2021 Edition
-//Samsung Galaxy F22
-//Samsung Galaxy F22
-//Samsung Galaxy A22
-//Samsung Galaxy A22
-//Samsung Galaxy M32
-//Samsung Galaxy M32
-//Samsung Galaxy A22 5G
-//Samsung Galaxy A22 5G
-//Samsung Galaxy F52 5G
-//Samsung Galaxy F52 5G
-//Samsung Galaxy Quantum 2
-//Samsung Galaxy Quantum 2
-//Samsung Galaxy F02s
-//Samsung Galaxy F02s
-//Samsung Galaxy F12
-//Samsung Galaxy F12
-//Samsung Galaxy M42 5G
-//Samsung Galaxy M42 5G
-//upcomingSamsung Galaxy Xcover 5
-//Samsung Galaxy Xcover 5
-//Samsung Galaxy A52 5G
-//Samsung Galaxy A52 5G
-//Samsung Galaxy A52
-//Samsung Galaxy A52
-//Samsung Galaxy A72
-//Samsung Galaxy A72
-//Samsung Galaxy S20 FE 5G
-//Samsung Galaxy S20 FE 5G
-//Samsung Galaxy A32 4G
-//Samsung Galaxy A32 4G
-//Samsung Galaxy M62
-//Samsung Galaxy M62
-//Samsung Galaxy F62
-//Samsung Galaxy F62
-//Samsung Galaxy M12
-//Samsung Galaxy M12
-//Samsung Galaxy M02
-//Samsung Galaxy M02
-//Samsung Galaxy A02
-//Samsung Galaxy A02
-//Samsung Galaxy A32 5G
-//Samsung Galaxy A32 5G
-//Samsung Galaxy M02s
-//Samsung Galaxy M02s
-//Samsung Galaxy S21 Ultra
-//Samsung Galaxy S21 Ultra
-//Samsung Galaxy S21+
-//    Samsung Galaxy S21+
-//    Samsung Galaxy S21
-//Samsung Galaxy S21
-//Samsung Galaxy A02s
-//Samsung Galaxy A02s
-//Samsung Galaxy A12
-//Samsung Galaxy A12
-//Samsung Galaxy M21s
-//Samsung Galaxy M21s
-//Samsung W21 5G
-//Samsung W21 5G
-//Samsung Galaxy F41
-//Samsung Galaxy F41
-//Samsung Galaxy A3 Core
-//Samsung Galaxy A3 Core
-//Samsung Galaxy S20 FE
-//Samsung Galaxy S20 FE
-//Samsung Galaxy A42 5G
-//Samsung Galaxy A42 5G
-//Samsung Galaxy Z Fold 2
-//Samsung Galaxy Z Fold 2
-//Samsung Galaxy M51
-//Samsung Galaxy M51
-//Samsung Galaxy Note 20 Ultra 5G
-//Samsung Galaxy Note 20 Ultra 5G
-//Samsung Galaxy Note 20 5G
-//Samsung Galaxy Note 20 5G
-//Samsung Galaxy Note 20 Ultra
-//Samsung Galaxy Note 20 Ultra
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            array('title' => 'iphone 7', 'description' => "Mobile model", 'taxonomy_id' => 4, 'published_at' => null, 'lang' => 'en'),
-
-            //  models - mobile
-            array('title' => '2017', 'mobile' => "Car model", 'taxonomy_id' => 4, 'published_at' => null, 'lang' => 'en'),
-            array('title' => 'zte', 'mobile' => "Mobile Brands", 'taxonomy_id' => 4, 'published_at' => null, 'lang' => 'en'),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        );
-        DB::table('taxonomy_contents')->insert($taxonomy_contents);
+            /*********************************
+             *            harajs
+             ********************************/
+            // harajs
+            array('id' => 1, 'title' => 'cars', 'description' => "all ads about cars", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 2, 'title' => 'devices', 'description' => "all ads about devices including electronics...", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 3, 'title' => 'real estate', 'description' => "all ads that deals with buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 4, 'title' => 'others', 'description' => "all ads with different categories", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+
+            /*********************************
+             *            brands
+             ********************************/
+            // harajs > brands
+            // cars
+            array('id' => 5, 'title' =>'toyota', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 6, 'title' => 'ford' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 7, 'title' => 'chevrolet' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 8, 'title' => 'hyundai' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 9, 'title' =>  'mercedes', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 10, 'title' =>  'honda', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 11, 'title' =>  'bmw', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 12, 'title' =>  'dodge', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 13, 'title' =>   'gms', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 14, 'title' =>  'chrysler', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 15, 'title' =>  'pocket', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 16, 'title' =>  'mitsubishi', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 17, 'title' =>  'mazda', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 18, 'title' =>  'land rover', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 19, 'title' =>  'isuzu', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 20, 'title' =>  'cadillac', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 21, 'title' =>  'porsche', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 22, 'title' =>  'audi', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 23, 'title' =>  'suzuki', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 24, 'title' =>  'infinity', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 25, 'title' => 'hummer' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 26, 'title' => 'lincoln' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 27, 'title' => 'volks' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 28, 'title' =>  'wagon', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 29, 'title' => 'daihatsu' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 30, 'title' =>'jelly', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 31, 'title' => 'mercury' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 32, 'title' =>  'volvo', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 33, 'title' =>  'peugeot', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 34, 'title' => 'bentley' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 35, 'title' => 'jaguar' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 36, 'title' =>  'subaru', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 37, 'title' =>  'changan', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 38, 'title' => 'buick' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 39, 'title' =>  'maserati', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 40, 'title' => ' rolls-royce' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 41, 'title' =>  'lamborghini', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 42, 'title' =>  'opel', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 43, 'title' => 'skoda' , 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 44, 'title' =>  'ferrari', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 45, 'title' =>  'citroen', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 46, 'title' =>  'cherry', 'description' => "car brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+
+            // harajs  > brands
+            // devices
+            array('id' => 47, 'title' => 'acer', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 48, 'title' => 'alcatel', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 49, 'title' => 'allview', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 50, 'title' => 'amazon', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 51, 'title' => 'amoi', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 52, 'title' => 'apple', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 53, 'title' => 'archos', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 54, 'title' => 'asus', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 55, 'title' => 'at&t', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 56, 'title' => 'benefon', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 57, 'title' => 'benq', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 58, 'title' => 'benq-siemens', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 59, 'title' => 'bird', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 60, 'title' => 'blackberry', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 61, 'title' => 'blackview', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 62, 'title' => 'blu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 63, 'title' => 'bosch', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 64, 'title' => 'bq', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 65, 'title' => 'casio', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 66, 'title' => 'cat', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 67, 'title' => 'celkon', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 68, 'title' => 'chea', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 69, 'title' => 'coolpad', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 70, 'title' => 'dell', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 71, 'title' => 'emporia', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 72, 'title' => 'energizer', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 73, 'title' => 'ericsson', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 74, 'title' => 'eten', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 75, 'title' => 'fairphone', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 76, 'title' => 'fujitsu siemens', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 77, 'title' => 'garmin-asus', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 78, 'title' => 'gigabyte', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 79, 'title' => 'gionee', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 80, 'title' => 'google', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 81, 'title' => 'haier', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 82, 'title' => 'honor', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 83, 'title' => 'hp', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 84, 'title' => 'htc', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 85, 'title' => 'huawei', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 86, 'title' => 'i-mate', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 87, 'title' => 'i-mobile', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 88, 'title' => 'icemobile', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 89, 'title' => 'infinix', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 90, 'title' => 'innostream', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 91, 'title' => 'inq', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 92, 'title' => 'intex', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 93, 'title' => 'jolla', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 94, 'title' => 'karbonn', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 95, 'title' => 'kyocera', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 96, 'title' => 'lava', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 97, 'title' => 'leeco', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 98, 'title' => 'lenovo', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 99, 'title' => 'lg', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 100, 'title' => 'maxon', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 101, 'title' => 'maxwest', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 102, 'title' => 'meizu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 103, 'title' => 'micromax', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 104, 'title' => 'microsoft', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 105, 'title' => 'mitac', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 106, 'title' => 'mitsubishi', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 107, 'title' => 'modu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 108, 'title' => 'motorola', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 109, 'title' => 'mwg', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 110, 'title' => 'nec', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 111, 'title' => 'neonode', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 112, 'title' => 'niu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 113, 'title' => 'nokia', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 114, 'title' => 'nvidia', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 115, 'title' => 'o2', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 116, 'title' => 'oneplus', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 117, 'title' => 'oppo', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 118, 'title' => 'orange', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 119, 'title' => 'palm', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 120, 'title' => 'panasonic', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 121, 'title' => 'pantech', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 122, 'title' => 'parla', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 123, 'title' => 'philips', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 124, 'title' => 'plum', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 125, 'title' => 'posh', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 126, 'title' => 'prestigio', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 127, 'title' => 'qmobile', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 128, 'title' => 'qtek', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 129, 'title' => 'razer', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 130, 'title' => 'realme', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 131, 'title' => 'sagem', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 132, 'title' => 'samsung', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 133, 'title' => 'sendo', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 134, 'title' => 'sewon', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 135, 'title' => 'sharp', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 136, 'title' => 'siemens', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 137, 'title' => 'sonim', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 138, 'title' => 'sony', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 139, 'title' => 'sony ericsson', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 140, 'title' => 'spice', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 141, 'title' => 't-mobile', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 142, 'title' => 'tcl', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 143, 'title' => 'tecno', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 144, 'title' => 'tel.me.', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 145, 'title' => 'telit', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 146, 'title' => 'thuraya', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 147, 'title' => 'toshiba', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 148, 'title' => 'ulefone', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 149, 'title' => 'unnecto', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 150, 'title' => 'vertu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 151, 'title' => 'verykool', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 152, 'title' => 'vivo', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 153, 'title' => 'vk mobile', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 154, 'title' => 'vodafone', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 155, 'title' => 'wiko', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 156, 'title' => 'wnd', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 157, 'title' => 'xcute', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 158, 'title' => 'xiaomi', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 159, 'title' => 'xolo', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 160, 'title' => 'yezz', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 161, 'title' => 'yota', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 162, 'title' => 'yu', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+            array('id' => 163, 'title' => 'zte', 'description' => "mobile brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 2, 'lang' => 'en'),
+
+
+            /*********************************
+             *            types
+             ********************************/
+            // harajs > brands > types
+            // cars > toyota
+             array('id' => 164, 'title' => 'land cruiser', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 165, 'title' => 'camry', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 166, 'title' => 'avalon', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 167, 'title' => 'hilux', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 168, 'title' => 'corolla', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 169, 'title' => 'ns', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 170, 'title' => 'prado', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 171, 'title' => 'orion', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 172, 'title' => 'sequoia', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 173, 'title' => 'bus', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 174, 'title' => 'rav', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 175, 'title' => 'innova', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 176, 'title' => 'rav', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 177, 'title' => 'eco', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 178, 'title' => 'toyota 86', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+             array('id' => 179, 'title' => 'prius', 'description' => "car type", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 5, 'lang' => 'en'),
+
+            /*********************************
+             *            models
+             ********************************/
+            // harajs > models
+            // cars
+            array('id' => 180, 'title' => '1996', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 181, 'title' => '1997', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 182, 'title' => '1998', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 183, 'title' => '1999', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 184, 'title' => '2000', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 185, 'title' => '2001', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 186, 'title' => '2002', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 187, 'title' => '2003', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 188, 'title' => '2004', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 189, 'title' => '2005', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 190, 'title' => '2006', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 191, 'title' => '2007', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 192, 'title' => '2008', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 193, 'title' => '2009', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 194, 'title' => '2010', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 195, 'title' => '2011', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 196, 'title' => '2012', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 197, 'title' => '2013', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 198, 'title' => '2014', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 199, 'title' => '2015', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 200, 'title' => '2016', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 201, 'title' => '2017', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 202, 'title' => '2018', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 203, 'title' => '2019', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 204, 'title' => '2020', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+            array('id' => 205, 'title' => '2021', 'description' => "car model", 'taxonomy_id' => 4, 'published_at' => now(), 'parent_id' => 1, 'lang' => 'en'),
+
+
+            // harajs  > brands > models
+            // devices > apple
+            array('id' => 206, 'title' => 'iphone 12 pro', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 207, 'title' => 'iphone 12 pro max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 208, 'title' => 'iphone 12 pro max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 209, 'title' => 'iphone 12', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 210, 'title' => 'iphone 12 mini', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 211, 'title' => 'iphone 12', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 212, 'title' => 'iphone 12', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 213, 'title' => 'iphone se (2020)', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 214, 'title' => 'iphone se (2020)', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 215, 'title' => 'iphone 11 pro', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 216, 'title' => 'iphone 11 pro', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 217, 'title' => 'iphone 11 pro max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 218, 'title' => 'iphone 11 pro max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 219, 'title' => 'iphone 11', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 220, 'title' => 'iphone 11', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 221, 'title' => 'apple iphone xr', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 222, 'title' => 'apple iphone xr', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 223, 'title' => 'apple iphone xs max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 224, 'title' => 'apple iphone xs max', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 225, 'title' => 'apple iphone xs', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 226, 'title' => 'apple iphone xs', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 227, 'title' => 'apple iphone 8', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+            array('id' => 228, 'title' => 'apple iphone 8', 'description' => "apple brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 52, 'lang' => 'en'),
+
+            // harajs
+            // real estate
+            array('id' => 229, 'title' => 'lands', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 230, 'title' => 'for sale', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 231, 'title' => 'apartments', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 232, 'title' => 'for rent', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 233, 'title' => 'villas', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 234, 'title' => 'for sale', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 235, 'title' => 'apartments', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 236, 'title' => 'houses', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 237, 'title' => 'building', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 238, 'title' => 'breaks', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 239, 'title' => 'shops', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 240, 'title' => 'villas', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 241, 'title' => 'farmer', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+            array('id' => 242, 'title' => 'roles', 'description' => "real estate", 'taxonomy_id' => 1, 'published_at' => now(), 'parent_id' => 3, 'lang' => 'en'),
+
+            // harajs > categories
+            // others
+            array('id' => 243, 'title' => 'animals, livestock, and bird', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 244, 'title' => 'personal accessories', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 245, 'title' => 'services', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 246, 'title' => 'food and beverages', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 247, 'title' => 'games and entertainment', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 248, 'title' => 'hunting and trips', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 249, 'title' => 'programming and designs', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 250, 'title' => 'parties and events', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 251, 'title' => 'library and arts', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 252, 'title' => 'travel and tourism', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+            array('id' => 253, 'title' => 'uncategorized section', 'description' => "categories", 'taxonomy_id' => 5, 'published_at' => now(), 'parent_id' => 4, 'lang' => 'en'),
+
+            // harajs > categories > types
+            // others > animals, livestock, and birds
+            array('id' => 254, 'title' => 'sheep', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 255, 'title' => 'parrot', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 256, 'title' => 'pigeons', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 257, 'title' => 'cats', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 258, 'title' => 'chicken', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 259, 'title' => 'goats', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 260, 'title' => 'camels', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 261, 'title' => 'horses', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 262, 'title' => 'fish', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 263, 'title' => 'turtles', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 264, 'title' => 'rabbits', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 265, 'title' => 'squirrels', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+            array('id' => 266, 'title' => 'hyrax', 'description' => "animals, livestock, and birds", 'taxonomy_id' => 3, 'published_at' => now(), 'parent_id' => 243, 'lang' => 'en'),
+
+            // harajs  > brands > models
+            // devices > samsung
+            array('id' => 267, 'title' => 'samsung a12 nacho', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 268, 'title' => 'samsung galaxy m21 2021 edition', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 269, 'title' => 'samsung galaxy m21 2021 edition', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 270, 'title' => 'samsung galaxy f22', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 271, 'title' => 'samsung galaxy f22', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 272, 'title' => 'samsung galaxy a22', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 273, 'title' => 'samsung galaxy a22', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 274, 'title' => 'samsung galaxy m32', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 275, 'title' => 'samsung galaxy m32', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 276, 'title' => 'samsung galaxy a22 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 277, 'title' => 'samsung galaxy a22 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 278, 'title' => 'samsung galaxy f52 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 279, 'title' => 'samsung galaxy f52 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 280, 'title' => 'samsung galaxy quantum 2', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 281, 'title' => 'samsung galaxy quantum 2', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 282, 'title' => 'samsung galaxy f02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 283, 'title' => 'samsung galaxy f02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 284, 'title' => 'samsung galaxy f12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 285, 'title' => 'samsung galaxy f12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 286, 'title' => 'samsung galaxy m42 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 287, 'title' => 'samsung galaxy m42 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 288, 'title' => 'upcomingsamsung galaxy xcover 5', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 289, 'title' => 'samsung galaxy xcover 5', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 290, 'title' => 'samsung galaxy a52 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 291, 'title' => 'samsung galaxy a52 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 292, 'title' => 'samsung galaxy a52', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 293, 'title' => 'samsung galaxy a52', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 294, 'title' => 'samsung galaxy a72', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 295, 'title' => 'samsung galaxy a72', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 296, 'title' => 'samsung galaxy s20 fe 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 297, 'title' => 'samsung galaxy s20 fe 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 298, 'title' => 'samsung galaxy a32 4g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 299, 'title' => 'samsung galaxy a32 4g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 300, 'title' => 'samsung galaxy m62', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 301, 'title' => 'samsung galaxy m62', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 302, 'title' => 'samsung galaxy f62', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 303, 'title' => 'samsung galaxy f62', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 304, 'title' => 'samsung galaxy m12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 305, 'title' => 'samsung galaxy m12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 306, 'title' => 'samsung galaxy m02', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 307, 'title' => 'samsung galaxy m02', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 308, 'title' => 'samsung galaxy a02', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 309, 'title' => 'samsung galaxy a02', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 310, 'title' => 'samsung galaxy a32 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 311, 'title' => 'samsung galaxy a32 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 312, 'title' => 'samsung galaxy m02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 313, 'title' => 'samsung galaxy m02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 314, 'title' => 'samsung galaxy s21 ultra', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 315, 'title' => 'samsung galaxy s21 ultra', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 316, 'title' => 'samsung galaxy s21+', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 317, 'title' => 'samsung galaxy s21+', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 318, 'title' => 'samsung galaxy s21', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 319, 'title' => 'samsung galaxy s21', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 320, 'title' => 'samsung galaxy a02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 321, 'title' => 'samsung galaxy a02s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 322, 'title' => 'samsung galaxy a12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 323, 'title' => 'samsung galaxy a12', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 324, 'title' => 'samsung galaxy m21s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 325, 'title' => 'samsung galaxy m21s', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 326, 'title' => 'samsung w21 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 327, 'title' => 'samsung w21 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 328, 'title' => 'samsung galaxy f41', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 329, 'title' => 'samsung galaxy f41', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 330, 'title' => 'samsung galaxy a3 core', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 331, 'title' => 'samsung galaxy a3 core', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 332, 'title' => 'samsung galaxy s20 fe', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 333, 'title' => 'samsung galaxy s20 fe', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 334, 'title' => 'samsung galaxy a42 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 335, 'title' => 'samsung galaxy a42 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 336, 'title' => 'samsung galaxy z fold 2', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 337, 'title' => 'samsung galaxy z fold 2', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 338, 'title' => 'samsung galaxy m51', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 339, 'title' => 'samsung galaxy m51', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 340, 'title' => 'samsung galaxy note 20 ultra 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 341, 'title' => 'samsung galaxy note 20 ultra 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 342, 'title' => 'samsung galaxy note 20 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 343, 'title' => 'samsung galaxy note 20 5g', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 344, 'title' => 'samsung galaxy note 20 ultra', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+            array('id' => 345, 'title' => 'samsung galaxy note 20 ultra', 'description' => "samsung brand", 'taxonomy_id' => 2, 'published_at' => now(), 'parent_id' => 132, 'lang' => 'en'),
+
+            // tags
+            array('id' => 346, 'title' => 'new', 'description' => "new ads", 'taxonomy_id' => 6, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 347, 'title' => 'second-hand', 'description' => "second-hand ads", 'taxonomy_id' => 6, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 348, 'title' => 'used', 'description' => "used ads", 'taxonomy_id' => 6, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 349, 'title' => 'cheap', 'description' => "cheap ads", 'taxonomy_id' => 6, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('id' => 350, 'title' => 'latest', 'description' => "latest ads", 'taxonomy_id' => 6, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            );
+        db::table('taxonomy_contents')->insert($taxonomy_contents);
     }
 }

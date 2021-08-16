@@ -15,13 +15,13 @@ class CreateTaxonomiesTable extends Migration
     {
         Schema::create('taxonomies', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['tags', 'brands', 'categories', 'types']);
-            $table->integer('parent')->nullable();
-            $table->integer('sort')->nullable();
+            $table->string('type');
+            $table->integer('parent_id')->nullable();
             $table->dateTime('published_at')->nullable();
+            $table->string('lang')->nullable();
             $table->softDeletes();
             $table->timestamps();
-            $table->index('type');
+            $table->index(['type', 'lang']);
         });
     }
 
