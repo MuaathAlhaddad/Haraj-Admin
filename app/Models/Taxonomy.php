@@ -17,15 +17,6 @@ class Taxonomy extends Model
      ************************/
 
     /**
-     * Get the taxonomy's ads
-     * @return BelongsToMany
-     */
-    public function ads(): BelongsToMany
-    {
-        return $this->belongsToMany(Ad::class);
-    }
-
-    /**
      * get the taxonomy contents of a taxonomy
      * @return HasMany
      */

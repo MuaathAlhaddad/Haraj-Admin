@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ReviewSeeder::class,
             TaxonomySeeder::class,
             Taxonomy_contentSeeder::class,
+            AdTaxonomyContentSeeder::class,
 
         ]);
     }

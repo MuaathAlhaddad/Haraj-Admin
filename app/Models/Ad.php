@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
@@ -30,7 +29,6 @@ class Ad extends Model
      *           Relations
      ********************************/
     /**
-
      * Get the ad's user.
      *
      * @return BelongsTo
@@ -40,8 +38,8 @@ class Ad extends Model
         return $this->belongsTo(User::class);
     }
 
-    //Get ad's comments
     /**
+     * Get ad's comments
      * @return HasMany
      */
     public function comments(): HasMany
@@ -49,13 +47,13 @@ class Ad extends Model
         return $this->hasMany(Comment::class);
     }
 
-    //Get ad's taxomomies
     /**
+     * Get ad's taxomomyContents
      * @return BelongsToMany
      */
-    public function taxonomies(): BelongsToMany
+    public function taxomomyContents(): BelongsToMany
     {
-        return $this->belongsToMany(Taxonomy::class);
+        return $this->belongsToMany(TaxonomyContent::class, 'ad_taxonomy_content');
     }
 
 }

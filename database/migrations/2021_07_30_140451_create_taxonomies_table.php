@@ -15,7 +15,7 @@ class CreateTaxonomiesTable extends Migration
     {
         Schema::create('taxonomies', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('type')->unique();
             $table->integer('parent_id')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->string('lang')->nullable();

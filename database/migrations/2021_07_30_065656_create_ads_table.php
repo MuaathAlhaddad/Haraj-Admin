@@ -15,10 +15,10 @@ class CreateAdsTable extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
-            $table->integer('sku')->unique();
+            $table->string('sku')->unique();
             $table->string('title');
             $table->string('description')->nullable();
-            $table->float('price');
+            $table->float('price', 10, 2);
             $table->foreignId('user_id')->constrained('users');
             $table->boolean('warranty')->nullable();
             $table->boolean('favorited')->nullable();
