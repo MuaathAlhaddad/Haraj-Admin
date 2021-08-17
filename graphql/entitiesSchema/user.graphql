@@ -1,17 +1,29 @@
 extend type Mutation {
-    createUser(phone_no: String!, country_id: Int!): User
-    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
+    createUser(phone_no: String @rules(9)): String!
+        @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
 
-    verifyPhoneNumber(verification_code: Int!, phone_no: String! ): String
-    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyPhoneNumber")
+    verifyPhoneNumber(verification_code: String!, phone_no: String!): String
+        @field(
+            resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyPhoneNumber"
+        )
 
-
+    updateUser(
+        phone_no: String!
+        name: String! 
+        email: String!  
+        password: String! @hash
+    ): String
+        @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@updateUser")
 }
 
 extend type Query {
-    users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]! @paginate(type: PAGINATOR, defaultCount: 10) @softDeletes
+    users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]!
+        @paginate(type: PAGINATOR, defaultCount: 10)
+        @softDeletes
 
     user(id: ID @eq): User @find @softDeletes
+
+    findByPhone(phone_no: String! @eq): User @find
 }
 
 type User {
@@ -34,6 +46,6 @@ type User {
     comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     reviews: [Review!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
-    metadata:  [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
 }

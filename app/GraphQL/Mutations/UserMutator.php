@@ -2,11 +2,11 @@
 
 namespace App\GraphQL\Mutations;
 
-use App\Models\Country;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Twilio\Rest\Client;
 
 /**
@@ -22,13 +22,19 @@ class UserMutator
      */
     public function create($root, array $args)
     {
+        
+        // $this->validatePhoneNumber($args['phone_no']);
+        if(User::wherePhoneNo($args['phone_no'])->exists()){ 
+            return "duplicated";
+        }
+
         $this->sendOTP($args['phone_no']);
 
-        $user  = $this->storeUser($args);
+         $this->storeUser($args);
 
-        return $user;
+        return "created";
     }
-
+ 
     /**
      *  Send OTP code to the given phone number
      *
@@ -55,22 +61,14 @@ class UserMutator
      * Store user
      * @param array $args
      *
-     * @return User
-     */
-    public function storeUser(array $args): User
+    */
+    public function storeUser(array $args)
     {
-        /* Get credentials from .env */
-        $country = Country::find($args['country_id']);
+         
+        User::create([
+            "phone_no" => $args['phone_no']
+        ]);
 
-        $user = new User();
-
-        $user->phone_no = $args['phone_no'];
-
-        $user->country()->associate($country);
-
-        $user->save();
-
-        return $user;
     }
 
     public function verifyPhoneNumber($root, array $args)
@@ -94,10 +92,39 @@ class UserMutator
             /* Authenticate user */
             Auth::login($user->first());
 
-            return 'Phone number verified';
+            return 'verified';
         }
 
         return 'Invalid verification code entered!';
+    }
+
+    
+    /**
+     * Update user
+     * @param array $args
+     *
+    */
+    public function updateUser(UpdateUserRequest $request, $args)
+    {
+        dd($args);
+    
+
+        $user=User::wherePhoneNo($args['phone_no'])->first();
+
+        if(is_null($user)){ 
+        return  "no exist";
+        }
+
+        $user->update([           
+            "name" => $args["name"],
+            "email" => $args["email"],
+            "password" =>  $args["password"] 
+        ]);
+ 
+        $user->save();
+    
+        return "updated";
+
     }
 
 }
