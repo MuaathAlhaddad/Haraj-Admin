@@ -1,3 +1,13 @@
+## Clean Code 
+- This app adheres to SOLD principles 
+  - S - Single Responsibility Principle
+  - O - Open/Closed Principle
+  - L - Liskov Substitution Principle
+  - I - Interface Segregation Principle
+  - D - Dependency Inversion Principle 
+- This app is using a config based credentials for easy caching
+- This is using 100% graphql api
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

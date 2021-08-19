@@ -13,6 +13,16 @@ class TaxonomyContent extends Model
     use HasFactory, SoftDeletes;
 
     /************************
+     *        Types
+     ************************/
+    const TITLE_CARS = 'cars';
+    const TITLE_DEVICES = 'devices';
+    const TITLE_REAL_ESTATE = 'real estate';
+    const TITLE_ANIMALS_LIVESTOCK_BIRD = 'animals, livestock, and bird';
+    const TITLE_PERSONAL_ACCESSORIES = 'personal accessories';
+    const TITLE_SERVICES = 'services';
+
+    /************************
      *        Relations
      ************************/
     /**

@@ -11,6 +11,10 @@ use Twilio\Rest\Client;
 
 /**
  * GraphQL User Mutation
+ * TODO: decouple graphql with app code and database
+ * TODO: open/closed principle
+ * TODO: place credentials in config/service to help you cache
+ * TODO: single responsibility principle
  */
 class UserMutator
 {
@@ -22,9 +26,9 @@ class UserMutator
      */
     public function create($root, array $args)
     {
-        
+
         // $this->validatePhoneNumber($args['phone_no']);
-        if(User::wherePhoneNo($args['phone_no'])->exists()){ 
+        if(User::wherePhoneNo($args['phone_no'])->exists()){
             return "duplicated";
         }
 
@@ -34,7 +38,7 @@ class UserMutator
 
         return "created";
     }
- 
+
     /**
      *  Send OTP code to the given phone number
      *
@@ -64,7 +68,7 @@ class UserMutator
     */
     public function storeUser(array $args)
     {
-         
+
         User::create([
             "phone_no" => $args['phone_no']
         ]);
@@ -98,7 +102,7 @@ class UserMutator
         return 'Invalid verification code entered!';
     }
 
-    
+
     /**
      * Update user
      * @param array $args
@@ -107,22 +111,22 @@ class UserMutator
     public function updateUser(UpdateUserRequest $request, $args)
     {
         dd($args);
-    
+
 
         $user=User::wherePhoneNo($args['phone_no'])->first();
 
-        if(is_null($user)){ 
+        if(is_null($user)){
         return  "no exist";
         }
 
-        $user->update([           
+        $user->update([
             "name" => $args["name"],
             "email" => $args["email"],
-            "password" =>  $args["password"] 
+            "password" =>  $args["password"]
         ]);
- 
+
         $user->save();
-    
+
         return "updated";
 
     }

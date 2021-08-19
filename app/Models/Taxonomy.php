@@ -13,9 +13,18 @@ class Taxonomy extends Model
     use HasFactory, SoftDeletes;
 
     /************************
+     *        Types
+     ************************/
+    const TYPE_HARAJS = 'harajs';
+    const TYPE_BRANDS = 'brands';
+    const TYPE_TYPES = 'TYPES';
+    const TYPE_MODELS = 'models';
+    const TYPE_CATEGORIES = 'categories';
+    const TYPE_TAGS = 'tags';
+
+    /************************
      *        Relations
      ************************/
-
     /**
      * get the taxonomy contents of a taxonomy
      * @return HasMany
