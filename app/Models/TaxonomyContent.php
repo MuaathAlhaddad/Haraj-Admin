@@ -21,6 +21,9 @@ class TaxonomyContent extends Model
     const TITLE_ANIMALS_LIVESTOCK_BIRD = 'animals, livestock, and bird';
     const TITLE_PERSONAL_ACCESSORIES = 'personal accessories';
     const TITLE_SERVICES = 'services';
+    const TITLE_APPLE = 'apple';
+    const TITLE_SAMSUNG = 'samsung';
+    const TITLE_TOYOTA = 'toyota';
 
     /************************
      *        Relations
