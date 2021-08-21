@@ -7,10 +7,10 @@ use App\Traits\MetadataTrait;
 use App\Traits\ReportableTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -22,16 +22,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-         'name',
-         'email',
-         'password',
-         'phone_no',
-         'gender',
-         'phone_verified_at',
-         'country_id',
-         'state_id',
-         'email',
-         'phone_no'
+        'name',
+        'email',
+        'password',
+        'phone_no',
+        'gender',
+        'phone_verified_at',
+        'country_id',
+        'state_id',
+        'email',
+        'phone_no'
     ];
 
     /**
@@ -57,7 +57,6 @@ class User extends Authenticatable
      *        Relations
      ************************/
     /**
-
      * Get all user's Ads
      *
      * @return HasMany
@@ -117,4 +116,46 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
+    /************************
+     *        Methods
+     ************************/
+    /**
+     * Store phone number and associate country
+     * @param array $args
+     * @param int $country_id
+     * @return User
+     */
+    public function firstStepRegistration(array $args, int $country_id): User
+    {
+        $user = self::create([
+            "phone_no" => $args['phone_no']
+        ]);
+
+        $country = Country::find($country_id);
+
+        $user->country()->associate($country);
+
+        $user->save();
+
+        return $user;
+    }
+
+    /**
+     * fill up with registration details Store phone number and associate country
+     * @param array $args
+     * @param Country $country
+     * @return User
+     */
+    public function CompleteRegistration(array $args, Country $country): User
+    {
+        $user = self::create([
+            "phone_no" => $args['phone_no']
+        ]);
+
+        $user->country()->associate($country);
+
+        $user->save();
+
+        return $user;
+    }
 }

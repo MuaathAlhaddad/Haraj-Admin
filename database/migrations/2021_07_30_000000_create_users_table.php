@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('phone_no')->unique();
             $table->enum('gender', ['f', 'm'])->nullable();
-            $table->foreignId('country_id')->constrained('countries');
+            $table->foreignId('country_id')->nullable()->constrained('countries');
             $table->foreignId('state_id')->nullable()->constrained('states');
             $table->rememberToken();
             $table->dateTime('phone_verified_at')->nullable();

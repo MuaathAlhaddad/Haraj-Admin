@@ -1,25 +1,17 @@
 extend type Mutation {
-    createUser(phone_no: String @rules(9)): String!
-        @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
+    createUser(input: UpsertUserInput!@spread): User
+    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
 
-    verifyPhoneNumber(verification_code: String!, phone_no: String!): String
-        @field(
-            resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyPhoneNumber"
-        )
+    verifyOTP(verification_code: String!, phone_no: String!): String
+    @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyOTP")
 
-    updateUser(
-        phone_no: String!
-        name: String! 
-        email: String!  
-        password: String! @hash
-    ): String
-        @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@updateUser")
+    updateUser(input: UpsertUserInput! @spread): User @update
 }
 
 extend type Query {
     users(orderBy: _ @orderBy(columnsEnum: "UserColumns")): [User!]!
-        @paginate(type: PAGINATOR, defaultCount: 10)
-        @softDeletes
+    @paginate(type: PAGINATOR, defaultCount: 10)
+    @softDeletes
 
     user(id: ID @eq): User @find @softDeletes
 
@@ -28,11 +20,11 @@ extend type Query {
 
 type User {
     id: ID!
-    name: String!
-    email: String!
+    name: String
+    email: String
     email_verified_at: DateTime
-    password: String!
-    phone_no: String!
+    password: String
+    phone_no: String
     gender: String
     phone_verified_at: DateTime
     remember_token: String
@@ -48,4 +40,20 @@ type User {
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+}
+input UpsertUserInput @validator {
+    id: ID
+    phone_no: String
+    name: String
+    email: String
+    password: String @hash
+    gender: String
+    country: CreateCountryBelongsTo
+    state: CreateStateBelongsTo
+}
+input CreateCountryBelongsTo {
+    connect: ID
+}
+input CreateStateBelongsTo {
+    connect: ID
 }
