@@ -1,6 +1,6 @@
 extend type Query {
     countries(orderBy: _ @orderBy(columnsEnum: "CountryColumns")): [Country!]!
-        @paginate(type: PAGINATOR, defaultCount: 10)
+    @all
 
     country(id: ID @eq): Country @find
 }
@@ -10,6 +10,6 @@ type Country {
     code: String!
     name: String!
     phone_code: Int!
-    states: [State!]! @all
+    states: [State!]! @hasMany
     users: [User!]! @hasMany(type: PAGINATOR, defaultCount: 10)
 }
