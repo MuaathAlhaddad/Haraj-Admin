@@ -38,30 +38,30 @@ class AdTaxonomyContentSeeder extends Seeder
 
         $ad_taxonomy_content = array(
 
-            array('ad_id' => 1, 'taxonomy_content_id' => $cars_id,  'created_at' => now()),    // cars
-            array('ad_id' => 1, 'taxonomy_content_id' => $toyota_id,  'created_at' => now()),    // toyota
-            array('ad_id' => 1, 'taxonomy_content_id' => $land_cruiser_id,  'created_at' => now()),  // land cruiser
-            array('ad_id' => 1, 'taxonomy_content_id' => $car_model_2022_id,  'created_at' => now()),  // 2020
+            array('ad_id' => 1, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 1, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 1, 'taxonomy_content_id' => $land_cruiser_id, 'created_at' => now()),  // land cruiser
+            array('ad_id' => 1, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id,  'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id,  'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $camry_id,  'created_at' => now()),  // camry
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id,  'created_at' => now()),  // 2020
+            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 2, 'taxonomy_content_id' => $camry_id, 'created_at' => now()),  // camry
+            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id,  'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id,  'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $avalon_id,  'created_at' => now()),  // avalon
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id,  'created_at' => now()),  // 2020
+            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 2, 'taxonomy_content_id' => $avalon_id, 'created_at' => now()),  // avalon
+            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id,  'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id,  'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $hilux_id,  'created_at' => now()),  // hilux
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id,  'created_at' => now()),  // 2020
+            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 2, 'taxonomy_content_id' => $hilux_id, 'created_at' => now()),  // hilux
+            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id,  'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id,  'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $corolla_id,  'created_at' => now()),  // corolla
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id,  'created_at' => now()),  // 2020
+            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 2, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
         );
         DB::table('ad_taxonomy_content')->insert($ad_taxonomy_content);
 
@@ -87,29 +87,29 @@ class AdTaxonomyContentSeeder extends Seeder
 
         $ad_taxonomy_content = array(
 
-            array('ad_id' => 6, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 6, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 6, 'taxonomy_content_id' => $iphone_12_pro_id,  'created_at' => now()),  // iphone 12 pro
+            array('ad_id' => 6, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 6, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 6, 'taxonomy_content_id' => $iphone_12_pro_id, 'created_at' => now()),  // iphone 12 pro
 
-            array('ad_id' => 7, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 7, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 7, 'taxonomy_content_id' => $iphone_12_pro_max_id,  'created_at' => now()),  // iphone 12 pro max
+            array('ad_id' => 7, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 7, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 7, 'taxonomy_content_id' => $iphone_12_pro_max_id, 'created_at' => now()),  // iphone 12 pro max
 
-            array('ad_id' => 8, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 8, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 8, 'taxonomy_content_id' => $apple_watch_id,  'created_at' => now()),  // apple watch
+            array('ad_id' => 8, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 8, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 8, 'taxonomy_content_id' => $apple_watch_id, 'created_at' => now()),  // apple watch
 
-            array('ad_id' => 9, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 9, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 9, 'taxonomy_content_id' => $iphone_12_id,  'created_at' => now()),  // iphone 12
+            array('ad_id' => 9, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 9, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 9, 'taxonomy_content_id' => $iphone_12_id, 'created_at' => now()),  // iphone 12
 
-            array('ad_id' => 10, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 10, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 10, 'taxonomy_content_id' => $iphone_12_mini_id,  'created_at' => now()),  // iphone 12 mini
+            array('ad_id' => 10, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 10, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 10, 'taxonomy_content_id' => $iphone_12_mini_id, 'created_at' => now()),  // iphone 12 mini
 
-            array('ad_id' => 11, 'taxonomy_content_id' => $devices_id,  'created_at' => now()),    // devices
-            array('ad_id' => 11, 'taxonomy_content_id' => $apple_id,  'created_at' => now()),    // apple
-            array('ad_id' => 11, 'taxonomy_content_id' => $airpods_id,  'created_at' => now()),  // airpods
+            array('ad_id' => 11, 'taxonomy_content_id' => $devices_id, 'created_at' => now()),    // devices
+            array('ad_id' => 11, 'taxonomy_content_id' => $apple_id, 'created_at' => now()),    // apple
+            array('ad_id' => 11, 'taxonomy_content_id' => $airpods_id, 'created_at' => now()),  // airpods
         );
 
         DB::table('ad_taxonomy_content')->insert($ad_taxonomy_content);

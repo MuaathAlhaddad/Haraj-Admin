@@ -44,4 +44,16 @@ mutation {
         }
     }
 }
+
+query {
+    ad(where:{column:ID, operator:EQ, value: 1}) {
+        id
+        sku
+        taxomomyContents{
+            data{
+                title
+            }
+        }
+    }
+}
 ```
