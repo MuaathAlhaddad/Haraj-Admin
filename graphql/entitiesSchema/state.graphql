@@ -1,10 +1,10 @@
 extend type Query {
-    states(orderBy: _ @orderBy(columnsEnum: "StateColumns")): [State!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    states(orderBy: _ @orderBy(columnsEnum: "StateColumns")): [State!]! @all
 
     state(id: ID @eq): State @find
 }
 
-type State{
+type State {
     id: ID!
     name: String!
     country: Country @belongsTo
