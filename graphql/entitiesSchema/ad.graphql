@@ -4,7 +4,7 @@
 extend type Query {
     ads(orderBy: _ @orderBy(columnsEnum: "AdColumns")): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
-    ad(id: ID @eq): Ad @find
+    ad(where: _ @whereConditions(columnsEnum: "AdColumns")): Ad @first
 }
 
 type Ad{
@@ -22,7 +22,7 @@ type Ad{
     updated_at: DateTime
     user: User @belongsTo
     comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
-    taxonomies: [Taxonomy!]! @belongsToMany(type: PAGINATOR, defaultCount: 10)
+    taxomomyContents: [TaxonomyContent!]! @belongsToMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
