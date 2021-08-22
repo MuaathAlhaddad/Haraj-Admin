@@ -1,11 +1,11 @@
 extend type Mutation {
-    createUser(input: UpsertUserInput!@spread): User
+    createUser(input: CreateUserInput!@spread): User
     @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@create")
 
     verifyOTP(verification_code: String!, phone_no: String!): String
     @field(resolver: "App\\GraphQL\\Mutations\\UserMutator@verifyOTP")
 
-    updateUser(input: UpsertUserInput! @spread): User @update
+    updateUser(input: UpdateUserInput! @spread): User @update
 }
 
 extend type Query {
@@ -41,7 +41,11 @@ type User {
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
 }
-input UpsertUserInput @validator {
+input CreateUserInput @validator {
+    phone_no: String!
+    country: CreateCountryBelongsTo!
+}
+input UpdateUserInput @validator {
     id: ID
     phone_no: String
     name: String

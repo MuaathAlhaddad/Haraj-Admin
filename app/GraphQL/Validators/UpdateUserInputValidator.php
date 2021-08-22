@@ -5,7 +5,7 @@ namespace App\GraphQL\Validators;
 use Illuminate\Validation\Rule;
 use Nuwave\Lighthouse\Validation\Validator;
 
-class UpsertUserInputValidator extends Validator
+class UpdateUserInputValidator extends Validator
 {
     /**
      * Return the validation rules.
