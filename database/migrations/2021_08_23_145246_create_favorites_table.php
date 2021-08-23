@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdsTable extends Migration
+class CreateFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class CreateAdsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ads', function (Blueprint $table) {
+        Schema::create('favorites', function (Blueprint $table) {
             $table->id();
-            $table->string('sku')->unique();
-            $table->string('title');
-            $table->string('description')->nullable();
-            $table->float('price', 10, 2);
             $table->foreignId('user_id')->constrained('users');
-            $table->boolean('negotiable')->nullable();
-            $table->enum('status', ['draft', 'pending', 'unpublished', 'published', 'sold']);
+            $table->integer('favorite_id');
+            $table->string('favorite_type');
             $table->softDeletes();
             $table->timestamps();
-            $table->index(['user_id', 'status', 'sku']);
         });
     }
 
@@ -35,6 +30,6 @@ class CreateAdsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ads');
+        Schema::dropIfExists('favorites');
     }
 }

@@ -1,0 +1,20 @@
+extend type Query {
+    favorites(
+        orderBy: _ @orderBy(columnsEnum: "FavoriteColumns")
+        where: _ @whereConditions(columnsEnum: "FavoriteColumns")
+    ): [Favorite!]! @paginate(type: PAGINATOR, defaultCount: 10)
+
+    favorite(where: _ @whereConditions(columnsEnum: "FavoriteColumns")): Favorite @first
+}
+
+type Favorite {
+    id: ID!
+    favorite_id: Int!
+    favorite_type: String!
+    user: User @belongsTo
+    deleted_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    favoriteable: Favoriteable! @morphTo
+}
+union Favoriteable = Ad

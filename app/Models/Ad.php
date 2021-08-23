@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\AttachableTrait;
+use App\Traits\FavoriteableTrait;
 use App\Traits\MetadataTrait;
 use App\Traits\ReportableTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ad extends Model
 {
 
-    use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes;
+    use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes, FavoriteableTrait;
 
     protected $fillable = [
         'title',
@@ -48,10 +49,10 @@ class Ad extends Model
     }
 
     /**
-     * Get ad's taxomomyContents
+     * Get ad's taxonomyContents
      * @return BelongsToMany
      */
-    public function taxomomyContents(): BelongsToMany
+    public function taxonomyContents(): BelongsToMany
     {
         return $this->belongsToMany(TaxonomyContent::class, 'ad_taxonomy_content');
     }

@@ -116,6 +116,16 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
+    /**
+     * Get the user's favorites
+     *
+     * @return HasMany
+     */
+    public function favorites(): HasMany
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
     /************************
      *        Methods
      ************************/

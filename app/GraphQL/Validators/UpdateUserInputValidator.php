@@ -32,7 +32,6 @@ class UpdateUserInputValidator extends Validator
             ],
             'name' => [
                 'sometimes',
-                'min:5',
             ],
             'gender' => [
                 Rule::in(['m', 'f']),

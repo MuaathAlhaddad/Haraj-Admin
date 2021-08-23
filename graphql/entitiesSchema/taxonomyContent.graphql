@@ -1,7 +1,12 @@
 extend type Query {
-    taxonomyContents(orderBy: _ @orderBy(columnsEnum: "TaxonomyContentColumns")): [TaxonomyContent!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    taxonomyContents(
+        orderBy: _ @orderBy(columnsEnum: "TaxonomyContentColumns")
+        where: _ @whereConditions(columnsEnum: "TaxonomyContentColumns")
+    ): [TaxonomyContent!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
-    taxonomyContent(id: ID @eq): TaxonomyContent @find
+    taxonomyContent(
+        where: _ @whereConditions(columnsEnum: "TaxonomyContentColumns")
+    ): TaxonomyContent @first
 }
 
 type TaxonomyContent {
@@ -14,4 +19,5 @@ type TaxonomyContent {
     created_at: DateTime
     updated_at: DateTime
     taxonomy: Taxonomy @belongsTo
+    ads: [Ad!]! @belongsToMany
 }

@@ -1,7 +1,12 @@
 extend type Query {
-    taxonomies(orderBy: _ @orderBy(columnsEnum: "TaxonomyColumns")): [Taxonomy!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    taxonomies(
+        orderBy: _ @orderBy(columnsEnum: "TaxonomyColumns")
+        where: _ @whereConditions(columnsEnum: "TaxonomyColumns")
+    ): [Taxonomy!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
-    taxonomy(id: ID @eq): Taxonomy @find
+    taxonomy(
+        where: _ @whereConditions(columnsEnum: "TaxonomyColumns")
+    ): Taxonomy @first
 }
 
 type Taxonomy {
