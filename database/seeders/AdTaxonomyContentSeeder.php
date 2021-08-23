@@ -48,20 +48,20 @@ class AdTaxonomyContentSeeder extends Seeder
             array('ad_id' => 2, 'taxonomy_content_id' => $camry_id, 'created_at' => now()),  // camry
             array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $avalon_id, 'created_at' => now()),  // avalon
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+            array('ad_id' => 3, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 3, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 3, 'taxonomy_content_id' => $avalon_id, 'created_at' => now()),  // avalon
+            array('ad_id' => 3, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $hilux_id, 'created_at' => now()),  // hilux
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+            array('ad_id' => 4, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 4, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 4, 'taxonomy_content_id' => $hilux_id, 'created_at' => now()),  // hilux
+            array('ad_id' => 4, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
 
-            array('ad_id' => 2, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
-            array('ad_id' => 2, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
-            array('ad_id' => 2, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
-            array('ad_id' => 2, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+            array('ad_id' => 5, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 5, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 5, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 5, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
         );
         DB::table('ad_taxonomy_content')->insert($ad_taxonomy_content);
 
