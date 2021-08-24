@@ -12,7 +12,7 @@ Trait ReportableTrait
      * Get all the user's reports.
      * @return MorphMany
      */
-    public function reports()
+    public function reports(): MorphMany
     {
         return $this->morphMany(Report::class, 'reportable');
     }

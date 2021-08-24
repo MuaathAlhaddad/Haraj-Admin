@@ -6,15 +6,15 @@ namespace App\Traits;
 use App\Models\Favorite;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-Trait FavoriteableTrait
+trait FavoriteableTrait
 {
     /**
      * Get all the resource's favorite.
      * @return MorphMany
      */
-    public function favorite()
+    public function favorites(): MorphMany
     {
-    return $this->morphMany(Favorite::class, 'favoriteable');
+        return $this->morphMany(Favorite::class, 'favoriteable');
     }
 
 }

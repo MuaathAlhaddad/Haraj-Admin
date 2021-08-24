@@ -31,6 +31,7 @@ type Ad{
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    favorites: [Favorite!]! @morphMany(type: PAGINATOR, defaultCount: 10)
 }
 
 input CreateAdInput @validator {

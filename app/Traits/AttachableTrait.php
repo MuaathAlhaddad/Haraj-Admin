@@ -12,7 +12,7 @@ Trait AttachableTrait
      * Get all the resource's reports.
      * @return MorphMany
      */
-    public function attachments()
+    public function attachments(): MorphMany
     {
     return $this->morphMany(Attachment::class, 'attachable');
     }

@@ -12,7 +12,7 @@ Trait MetadataTrait
      * Get all the user's metadata.
      * @return MorphMany
      */
-    public function metadata()
+    public function metadata(): MorphMany
     {
     return $this->morphMany(Metadata::class, 'extended');
     }

@@ -19,14 +19,13 @@ type Favorite {
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
-    favoriteable: Favoriteable! @morphTo
+    favoriteable: Ad @morphTo
 }
-union Favoriteable = Ad
 
 input CreateFavoriteInput {
     favorite_id: Int!
     favorite_type: AdFavoriteType!
-    user: CreateUserBelongsTo!
+    user: CreateUserBelongsTo
 }
 enum AdFavoriteType {
     ad
