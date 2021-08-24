@@ -56,4 +56,35 @@ query {
         }
     }
 }
+
+# Write your query or mutation here
+mutation {
+    createAd(
+        input: {
+            title: "iphone 6"
+            description: "this is a desc for my iphone 5,please contact if you are sersious"
+            price: 1500
+            negotiable: 1
+            user: {connect: 1}
+            taxonomyContents: {connect:[2, 62, 220]}
+        }
+    ) {
+        id
+        sku
+        title
+        description
+        price
+        negotiable
+        created_at
+        user{
+            id
+            name
+        }
+        taxonomyContents{
+            data{
+                title
+            }
+        }
+    }
+}
 ```

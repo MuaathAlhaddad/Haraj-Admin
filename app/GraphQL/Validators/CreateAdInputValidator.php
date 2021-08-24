@@ -25,7 +25,7 @@ class CreateAdInputValidator extends Validator
             ],
             'price' => [
                 'required',
-                'number',
+                'numeric',
                 'regex:/^\d+(\.\d{1,2})?$/'
             ],
             "taxomomyContents" => [

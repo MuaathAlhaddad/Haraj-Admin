@@ -6,6 +6,8 @@ use App\Traits\AttachableTrait;
 use App\Traits\FavoriteableTrait;
 use App\Traits\MetadataTrait;
 use App\Traits\ReportableTrait;
+use BinaryCats\Sku\Concerns\SkuOptions;
+use BinaryCats\Sku\HasSku;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -17,7 +19,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ad extends Model
 {
 
-    use HasFactory, ReportableTrait, ReportableTrait, AttachableTrait, MetadataTrait, SoftDeletes, FavoriteableTrait;
+    use HasFactory, ReportableTrait, ReportableTrait,
+        AttachableTrait, MetadataTrait, SoftDeletes,
+        FavoriteableTrait, HasSku;
 
     protected $fillable = [
         'title',
@@ -25,6 +29,23 @@ class Ad extends Model
         'price',
         'negotiable'
     ];
+
+
+    /**
+     * Get the options for generating the Sku.
+     *
+     * @return SkuOptions
+     */
+    public function skuOptions() : SkuOptions
+    {
+        return SkuOptions::make()
+            ->from(['price', 'user_id', 'created_at'])
+            ->target('sku')
+            ->using('-')
+            ->forceUnique(true)
+            ->generateOnCreate(true)
+            ->refreshOnUpdate(false);
+    }
 
     /**********************************
      *           Relations
