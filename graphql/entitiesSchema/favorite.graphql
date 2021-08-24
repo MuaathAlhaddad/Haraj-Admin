@@ -1,3 +1,7 @@
+extend type Mutation {
+    createFavorite(input: CreateFavoriteInput! @spread): Favorite @create
+}
+
 extend type Query {
     favorites(
         orderBy: _ @orderBy(columnsEnum: "FavoriteColumns")
@@ -18,3 +22,12 @@ type Favorite {
     favoriteable: Favoriteable! @morphTo
 }
 union Favoriteable = Ad
+
+input CreateFavoriteInput {
+    favorite_id: Int!
+    favorite_type: AdFavoriteType!
+    user: CreateUserBelongsTo!
+}
+enum AdFavoriteType {
+    ad
+}

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\TwilioService\VerifyService;
 use App\TwilioService\VerifyServiceInterface;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Relation::morphMap([
+            'ad' => 'App\Models\Ad',
+        ]);
     }
 }
