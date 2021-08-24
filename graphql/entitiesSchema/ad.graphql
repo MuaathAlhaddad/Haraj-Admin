@@ -5,9 +5,13 @@ extend type Query {
     ads(
         orderBy: _ @orderBy(columnsEnum: "AdColumns")
         where: _ @whereConditions(columnsEnum: "AdColumns")
+        taxonomyContents: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
     ): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
-    ad(where: _ @whereConditions(columnsEnum: "AdColumns")): Ad @first
+    ad(
+        where: _ @whereConditions(columnsEnum: "AdColumns")
+        taxonomyContents: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
+    ): Ad @first
 }
 
 type Ad{
