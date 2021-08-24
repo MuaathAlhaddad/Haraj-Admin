@@ -87,4 +87,47 @@ mutation {
         }
     }
 }
+
+query {
+    #####################
+    # get all harajs
+    ####################
+    taxonomyContent {
+        harajs {
+            title
+        }
+        tags{
+            title
+        }
+    }
+
+    #####################
+    # get parent and types
+    ####################
+    # taxonomyContent(where: { column: TITLE, operator: LIKE, value: "%toyota%" }) {
+    #   id
+    #   title
+    #   parent {
+    #     id
+    #     title
+    #   }
+    #   types {
+    #     title
+    #   }
+    # }
+
+    #####################
+    # get brands and models
+    #################### 
+    # taxonomyContent(where: { column: TITLE, operator: LIKE, value: "%cars%" }) {
+    #   id
+    #   title
+    #   brands {
+    #     title
+    #   }
+    #   models {
+    #     title
+    #   }
+    # }
+}
 ```

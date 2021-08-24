@@ -35,6 +35,7 @@ input CreateAdInput @validator {
     price: Float
     negotiable: Int
     status: Int
+    # TODO: @inject(context: "user.id", name: "user_id")
     user: CreateUserBelongsTo
     taxonomyContents: CreateTaxonomyContentBelongsToMany
     attachments: CreateAttachmentBelongsToMany

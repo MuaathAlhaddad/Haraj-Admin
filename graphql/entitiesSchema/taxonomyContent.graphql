@@ -13,6 +13,12 @@ type TaxonomyContent {
     id: ID!
     title: String!
     description: String
+    parent: TaxonomyContent @method(name: "parent")
+    harajs: [TaxonomyContent!]! @method(name: "harajs")
+    tags: [TaxonomyContent!]! @method(name: "tags")
+    brands: [TaxonomyContent!]! @hasMany
+    models: [TaxonomyContent!]! @hasMany
+    types: [TaxonomyContent!]! @hasMany
     lang: String
     published_at: DateTime
     deleted_at: DateTime
