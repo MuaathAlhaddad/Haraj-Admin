@@ -8,13 +8,15 @@ extend type Query {
         where: _ @whereConditions(columnsEnum: "FavoriteColumns")
     ): [Favorite!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
-    favorite(where: _ @whereConditions(columnsEnum: "FavoriteColumns")): Favorite @first
+    favorite(
+        where: _ @whereConditions(columnsEnum: "FavoriteColumns")
+    ): Favorite @first
 }
 
 type Favorite {
     id: ID!
-    favorite_id: Int!
-    favorite_type: String!
+    favoriteable_id: Int!
+    favoriteable_type: String!
     user: User @belongsTo
     deleted_at: DateTime
     created_at: DateTime
@@ -23,8 +25,8 @@ type Favorite {
 }
 
 input CreateFavoriteInput {
-    favorite_id: Int!
-    favorite_type: AdFavoriteType!
+    favoriteable_id: Int!
+    favoriteable_type: AdFavoriteType!
     user: CreateUserBelongsTo
 }
 enum AdFavoriteType {
