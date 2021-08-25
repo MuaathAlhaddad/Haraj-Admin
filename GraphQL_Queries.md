@@ -132,12 +132,23 @@ query {
 }
 
 mutation {
-    createFavorite(
-        input: {favorite_id: 1, favorite_type:ad, user:{connect:1} }
-    ) {
+    #   createFavorite(
+    #     input: {favoriteable_id: 1, favoriteable_type:ad, user:{connect:3} }
+    #   ) {
+    #     id
+    #     favoriteable_id
+    #     favoriteable_type
+    #   }
+
+    deleteFavorite(id: 3) {
         id
-        favorite_id
-        favorite_type
+        favoriteable_id
+        favoriteable_type
+        user {
+            id
+            name
+        }
     }
 }
+
 ```

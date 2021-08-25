@@ -18,8 +18,7 @@ class CreateFavoritesTable extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->integer('favoriteable_id');
             $table->string('favoriteable_type');
-            $table->unique(['favoriteable_id', 'favoriteable_type']);
-            $table->softDeletes();
+            $table->unique(['favoriteable_id', 'favoriteable_type', 'user_id']);
             $table->timestamps();
         });
     }

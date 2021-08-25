@@ -1,5 +1,7 @@
 extend type Mutation {
     createFavorite(input: CreateFavoriteInput! @spread): Favorite @create
+
+    deleteFavorite(id: ID!): Favorite! @delete
 }
 
 extend type Query {
