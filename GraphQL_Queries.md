@@ -130,4 +130,14 @@ query {
     #   }
     # }
 }
+
+mutation {
+    createFavorite(
+        input: {favorite_id: 1, favorite_type:ad, user:{connect:1} }
+    ) {
+        id
+        favorite_id
+        favorite_type
+    }
+}
 ```
