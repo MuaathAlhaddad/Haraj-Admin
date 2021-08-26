@@ -42,7 +42,7 @@ class UpdateUserInputValidator extends Validator
             ],
             "state" => [
                 "sometimes",
-                "exists:countries,id"
+                "exists:states,id"
             ]
         ];
     }
