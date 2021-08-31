@@ -1,6 +1,21 @@
 ```graphql
 # Write your query or mutation here
 mutation {
+    # sendOTP(phone_no: "01128853086"){
+    #   data{
+    #   status
+    #   message
+    #   }
+    # }
+    # verifyOTP(verification_code: "735522", phone_no: "+601128853086") {
+    #   data {
+    #     message
+    #     status
+    #   }
+    # }
+}
+
+mutation {
     # createUser(input: { phone_no: "+601128853086", country: { connect: 1 } }) {
     #   id
     #   name

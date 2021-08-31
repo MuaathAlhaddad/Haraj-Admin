@@ -18,12 +18,29 @@ class CreateUserInputValidator extends Validator
             "phone_no" => [
                 'required',
                 'regex:/(01)[0-9]{9}/',
-                Rule::unique('users', 'phone_no')->ignore($this->arg('id'), 'id'),
+                Rule::unique('users', 'phone_no'),
+            ],
+            "email" => [
+                'required',
+                'email',
+                'regex:/^.+@.+$/i',
+                Rule::unique('users', 'email'),
+            ],
+            "password" => [
+                'required',
+                'min:6',
+            ],
+            'name' => [
+                'required',
             ],
             "country" => [
-                "required",
+                "sometimes",
                 "exists:countries,id"
             ],
+            "state" => [
+                "sometimes",
+                "exists:states,id"
+            ]
         ];
     }
 }

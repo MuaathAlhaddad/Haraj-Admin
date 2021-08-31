@@ -2,9 +2,11 @@
 
 namespace App\TwilioService;
 
+use Symfony\Component\HttpFoundation\Response;
+
 interface VerifyServiceInterface
 {
-    public function sendOTP(string $phone_number);
+    public function sendOTP(string $phone_number): array;
 
-    public function verify(array $args);
+    public function verifyOTP(array $args): array;
 }

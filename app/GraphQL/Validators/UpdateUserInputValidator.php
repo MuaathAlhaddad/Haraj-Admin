@@ -15,11 +15,6 @@ class UpdateUserInputValidator extends Validator
     public function rules(): array
     {
         return [
-            "phone_no" => [
-                'sometimes',
-                'regex:/(01)[0-9]{9}/',
-                Rule::unique('users', 'phone_no')->ignore($this->arg('id'), 'id'),
-            ],
             "email" => [
                 'sometimes',
                 'email',
@@ -42,7 +37,7 @@ class UpdateUserInputValidator extends Validator
             ],
             "state" => [
                 "sometimes",
-                "exists:countries,id"
+                "exists:states,id"
             ]
         ];
     }

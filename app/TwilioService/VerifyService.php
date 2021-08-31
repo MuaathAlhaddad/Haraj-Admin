@@ -2,8 +2,9 @@
 
 namespace App\TwilioService;
 
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
+use Twilio\Exceptions\ConfigurationException;
+use Twilio\Exceptions\TwilioException;
 use Twilio\Rest\Client;
 
 class VerifyService implements VerifyServiceInterface
@@ -14,20 +15,35 @@ class VerifyService implements VerifyServiceInterface
      *  Send OTP code to the given phone number
      *
      * @param string $phone_number
-     * @throws \Twilio\Exceptions\ConfigurationException
-     * @throws \Twilio\Exceptions\TwilioException
+     * @return array
+     * @throws ConfigurationException
+     * @throws TwilioException
      */
-    public function sendOTP(string $phone_number)
+    public function sendOTP(string $phone_number): array
     {
         $twilio = $this->registerCredentials();
 
-        $twilio->verify->v2->services($this->twilio_verify_sid)
-            ->verifications
-            ->create($phone_number, "sms");
+//        $twilio->verify->v2->services($this->twilio_verify_sid)
+//            ->verifications
+//            ->create($phone_number, "sms");
 
+        return [
+            'data' => [
+                'message' => 'OTP has been sent successfully',
+                'status' => Response::HTTP_OK
+            ]
+        ];
     }
 
-    public function verify(array $args): string
+    /**
+     * verify OTP code given by the user
+     *
+     * @param array $args
+     * @return array
+     * @throws ConfigurationException
+     * @throws TwilioException
+     */
+    public function verifyOTP(array $args): array
     {
         $twilio = $this->registerCredentials();
 
@@ -36,20 +52,23 @@ class VerifyService implements VerifyServiceInterface
             ->create($args['verification_code'], array('to' => $args['phone_no']));
 
         if ($verification->valid) {
-            $user = tap(User::where('phone_no', $args['phone_no']))->update(['phone_verified_at' => now()]);
-
-            Auth::login($user->first());
-
-            return 'verified';
+            return [
+                'data' => [
+                    'message' => 'Phone number has been verified successfully',
+                    'status' => Response::HTTP_OK
+                ]
+            ];
         }
 
-        return 'Invalid verification code entered!';
+        return [
+            'errors' => ['message' => 'Invalid verification code entered!'],
+        ];
     }
 
     /**
      * Get and Register Credentials
      * @return Client
-     * @throws \Twilio\Exceptions\ConfigurationException
+     * @throws ConfigurationException
      */
     public function registerCredentials(): Client
     {

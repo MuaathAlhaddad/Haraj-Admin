@@ -11,10 +11,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes, ReportableTrait, AttachableTrait, MetadataTrait;
+    use HasFactory, Notifiable, SoftDeletes,
+        ReportableTrait, AttachableTrait,
+        MetadataTrait, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -126,46 +129,15 @@ class User extends Authenticatable
         return $this->hasMany(Favorite::class);
     }
 
-    /************************
-     *        Methods
-     ************************/
     /**
-     * Store phone number and associate country
-     * @param array $args
-     * @param int $country_id
-     * @return User
+     * The "booted" method of the model.
+     *
+     * @return void
      */
-    public function firstStepRegistration(array $args, int $country_id): User
+    protected static function booted()
     {
-        $user = self::create([
-            "phone_no" => $args['phone_no']
-        ]);
-
-        $country = Country::find($country_id);
-
-        $user->country()->associate($country);
-
-        $user->save();
-
-        return $user;
-    }
-
-    /**
-     * fill up with registration details Store phone number and associate country
-     * @param array $args
-     * @param Country $country
-     * @return User
-     */
-    public function CompleteRegistration(array $args, Country $country): User
-    {
-        $user = self::create([
-            "phone_no" => $args['phone_no']
-        ]);
-
-        $user->country()->associate($country);
-
-        $user->save();
-
-        return $user;
+        static::created(function ($user) {
+            $user->update(['phone_verified_at' => now()]);
+        });
     }
 }
