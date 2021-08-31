@@ -5,29 +5,32 @@ extend type Query {
     ads(
         orderBy: _ @orderBy(columnsEnum: "AdColumns")
         where: _ @whereConditions(columnsEnum: "AdColumns")
-        taxonomyContents: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
+        taxonomyContents: _
+            @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
     ): [Ad!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
     ad(
         where: _ @whereConditions(columnsEnum: "AdColumns")
-        taxonomyContents: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
+        taxonomyContents: _
+            @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
     ): Ad @first
 }
 
-type Ad{
+type Ad {
     id: ID!
     sku: String!
     title: String!
     description: String
     price: Float!
-    negotiable: Int
+    negotiable: Boolean
     status: Int
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     user: User @belongsTo
     comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
-    taxonomyContents: [TaxonomyContent!]! @belongsToMany(type: PAGINATOR, defaultCount: 10)
+    taxonomyContents: [TaxonomyContent!]!
+        @belongsToMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
@@ -38,7 +41,7 @@ input CreateAdInput @validator {
     title: String
     description: String
     price: Float
-    negotiable: Int
+    negotiable: Boolean
     status: Int
     # TODO: @inject(context: "user.id", name: "user_id")
     user: CreateUserBelongsTo
