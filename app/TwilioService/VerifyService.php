@@ -23,9 +23,9 @@ class VerifyService implements VerifyServiceInterface
     {
         $twilio = $this->registerCredentials();
 
-//        $twilio->verify->v2->services($this->twilio_verify_sid)
-//            ->verifications
-//            ->create($phone_number, "sms");
+       $twilio->verify->v2->services($this->twilio_verify_sid)
+           ->verifications
+           ->create($phone_number, "sms");
 
         return [
             'data' => [

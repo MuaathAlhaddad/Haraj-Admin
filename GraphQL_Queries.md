@@ -16,7 +16,16 @@ mutation {
 }
 
 mutation {
-    # createUser(input: { phone_no: "+601128853086", country: { connect: 1 } }) {
+    # createUser(
+    #   input: {
+    #     name: "muaath"
+    #     email: "muaath2000@gmail.com"
+    #     password: "password"
+    #     phone_no: "+6011288523086"
+    #     country: { connect: 1 }
+    #     state: { connect: 1 }
+    #   }
+    # ) {
     #   id
     #   name
     #   email
@@ -30,35 +39,40 @@ mutation {
     #     id
     #     name
     #   }
+    #   created_at
+    #   phone_verified_at
     # }
+
 
     # verifyOTP(verification_code:"063749", phone_no: "+601128853086" )
 
-    updateUser(
-        input: {
-            id: 13
-            name: "muaath"
-            email: "muaath2000@gmail.com"
-            password: "01128853086"
-            gender: "m"
-            state: { connect: 1 }
-        }
-    ) {
-        id
-        name
-        email
-        phone_no
-        phone_verified_at
-        state {
-            id
-            name
-        }
-        country {
-            id
-            name
-        }
+   updateUser(
+    input: {
+      id:12
+      name: "muaath"
+      email: "muaath2000@gmail.com"
+      password: "password"
+      country: { connect: 3 }
+      state: { connect: 2 }
     }
-}
+  ) {
+    id
+    name
+    email
+    phone_no
+    phone_verified_at
+    state {
+      id
+      name
+    }
+    country {
+      id
+      name
+    }
+    created_at
+    phone_verified_at
+  }
+
 
 query {
     ad(where:{column:ID, operator:EQ, value: 1}) {
@@ -133,7 +147,7 @@ query {
 
     #####################
     # get brands and models
-    #################### 
+    ####################
     # taxonomyContent(where: { column: TITLE, operator: LIKE, value: "%cars%" }) {
     #   id
     #   title
