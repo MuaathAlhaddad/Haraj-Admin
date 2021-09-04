@@ -19,17 +19,11 @@ class Logout
     public function __invoke($_, array $args)
     {
         // TODO: Laravel Sanctum
-//        $user = $this->getAuthenticatedUser();
+        $user = $this->getAuthenticatedUser();
 
         $guard = Auth::guard(config('sanctum.guard', 'web'));
 
         $guard->logout();
-
-
-//        /** TODO: @var PersonalAccessToken $personalAccessToken */
-//        $personalAccessToken = $user->currentAccessToken();
-//        dd($user->tokens->first()->token);
-//        $personalAccessToken->delete();
 
         return [
             'status'  => 'TOKEN_REVOKED',

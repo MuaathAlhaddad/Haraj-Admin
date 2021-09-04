@@ -20,6 +20,7 @@ type TaxonomyContent {
     models: [TaxonomyContent!]! @hasMany
     types: [TaxonomyContent!]! @hasMany
     lang: String
+    icon: [String]
     published_at: DateTime
     deleted_at: DateTime
     created_at: DateTime

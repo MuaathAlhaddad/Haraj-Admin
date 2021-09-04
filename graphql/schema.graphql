@@ -169,6 +169,7 @@ enum TaxonomyContentColumns {
     TITLE
     DESCRIPTION
     LANG
+    ICON
     PUBLISHED_AT
     DELETED_AT
     CREATED_AT

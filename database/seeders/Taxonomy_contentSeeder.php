@@ -25,20 +25,20 @@ class Taxonomy_contentSeeder extends Seeder
 
         $taxonomy_contents = array(
             // harajs
-            array('title' => 'cars', 'description' => "all ads about cars", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'devices', 'description' => "all ads about devices including electronics...", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'real estate', 'description' => "all ads that deals with buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'animals, livestock, and bird', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'personal accessories', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'services', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'food and beverages', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'games and entertainment', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'hunting and trips', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'programming and designs', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'parties and events', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'library and arts', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'travel and tourism', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
-            array('title' => 'others', 'description' => "all ads with different categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en'),
+            array('title' => 'cars', 'description' => "all ads about cars", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fa', 'fa-car']),
+            array('title' => 'devices', 'description' => "all ads about devices including electronics...", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fa' , 'fa-desktop']),
+            array('title' => 'real estate', 'description' => "all ads that deals with buying, selling, management, or investment of real estate properties.", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fa', 'fa-home']),
+            array('title' => 'animals, livestock, and bird', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-dog']),
+            array('title' => 'personal accessories', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-keyboard']),
+            array('title' => 'services', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-concierge-bell']),
+            array('title' => 'food and beverages', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-pizza-slice']),
+            array('title' => 'games and entertainment', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-gamepad']),
+            array('title' => 'hunting and trips', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-fish']),
+            array('title' => 'programming and designs', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fab', 'fa-free-code-camp']),
+            array('title' => 'parties and events', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-birthday-cake']),
+            array('title' => 'library and arts', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-book-reader']),
+            array('title' => 'travel and tourism', 'description' => "categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-plane']),
+            array('title' => 'others', 'description' => "all ads with different categories", 'taxonomy_id' => $harajs_id, 'published_at' => now(), 'parent_id' => null, 'lang' => 'en', 'icon' => ['fas', 'fa-ellipsis-h']),
         );
 
         DB::table('taxonomy_contents')->insert($taxonomy_contents);
