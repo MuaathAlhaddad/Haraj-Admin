@@ -1,5 +1,5 @@
 extend type Mutation {
-    sendOTP(phone_no: String!): Response!
+    sendOTP(phone_no: String @rules(apply: ["required", "unique:users,phone_no", "regex:/(01)[0-9]{9}/"])): Response!
     @field(resolver: "App\\GraphQL\\Mutations\\PhoneVerificationMutator@sendOTP")
 
     verifyOTP(verification_code: String!, phone_no: String!): Response!
@@ -12,6 +12,8 @@ extend type Mutation {
     login(input: LoginUserInput! @spread): AccessToken!
 
     logout: LogoutResponse! @guard
+
+    validateEmail(email: String @eq  @rules(apply: ["required", "unique:users,email", "regex:/^.+@.+$/i"])): User @first
 
 }
 

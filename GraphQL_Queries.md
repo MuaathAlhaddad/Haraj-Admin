@@ -166,4 +166,15 @@ mutation {
     }
 }
 
+# Write your query or mutation here
+mutation {
+    # validateEmail(email: "muaath2000@gmail.com") {
+    #   id
+    #   name
+    # }
+    validateEmail(email: "albert.rau@example.org") {
+        id
+        name
+    }
+}
 ```
