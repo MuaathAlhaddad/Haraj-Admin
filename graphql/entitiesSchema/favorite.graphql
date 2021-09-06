@@ -23,7 +23,7 @@ type Favorite {
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
-    favoriteable: Ad @morphTo
+    ad: Ad @morphTo(relation: "favoriteable")
 }
 
 input CreateFavoriteInput {

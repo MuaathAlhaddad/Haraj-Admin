@@ -192,15 +192,17 @@ mutation {
         }
     }
     # Write your query or mutation here
-    query{
-        user(id:1){
-            id
-            name
-            favorites{
-                data{
+    user(id: 2) {
+        id
+        name
+        favorites {
+            data {
+                id
+                favoriteable_id
+                favoriteable_type
+                ad {
                     id
-                    favoriteable_id
-                    favoriteable_type
+                    sku
                 }
             }
         }
