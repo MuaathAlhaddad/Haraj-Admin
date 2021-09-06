@@ -178,8 +178,8 @@ enum TaxonomyContentColumns {
 ###################( Favorite )############################
 enum FavoriteColumns {
     ID
-    FAVORITE_ID
-    FAVORITE_TYPE
+    FAVORITEABLE_ID
+    FAVORITEABLE_TYPE
     DELETED_AT
     CREATED_AT
     UPDATED_AT

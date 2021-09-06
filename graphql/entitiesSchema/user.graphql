@@ -43,6 +43,7 @@ type User {
     created_at: DateTime
     updated_at: DateTime
     ads: [Ad!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    favorites: [Favorite!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     country: Country @belongsTo
     state: State @belongsTo
     messages: [Message!]! @hasMany(type: PAGINATOR, defaultCount: 10)
