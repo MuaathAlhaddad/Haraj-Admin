@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use App\Traits\AttachableTrait;
-use App\Traits\FavoriteableTrait;
-use App\Traits\MetadataTrait;
-use App\Traits\ReportableTrait;
+use App\Traits\HasAttachment;
+use App\Traits\HasFavorite;
+use App\Traits\HasMetadata;
+use App\Traits\HasReport;
 use BinaryCats\Sku\Concerns\SkuOptions;
 use BinaryCats\Sku\HasSku;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,9 +19,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ad extends Model
 {
 
-    use HasFactory, ReportableTrait, ReportableTrait,
-        AttachableTrait, MetadataTrait, SoftDeletes,
-        FavoriteableTrait, HasSku;
+    use HasFactory, HasReport, HasReport,
+        HasAttachment, HasMetadata, SoftDeletes,
+        HasFavorite, HasSku;
 
     protected $fillable = [
         'title',

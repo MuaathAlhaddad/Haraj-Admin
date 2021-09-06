@@ -6,7 +6,7 @@ namespace App\Traits;
 use App\Models\Attachment;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-Trait AttachableTrait
+Trait HasAttachment
 {
     /**
      * Get all the resource's reports.

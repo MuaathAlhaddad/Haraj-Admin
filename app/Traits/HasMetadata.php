@@ -6,7 +6,7 @@ namespace App\Traits;
 use App\Models\Metadata;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-Trait MetadataTrait
+Trait HasMetadata
 {
     /**
      * Get all the user's metadata.

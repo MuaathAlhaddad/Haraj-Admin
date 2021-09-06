@@ -6,7 +6,7 @@ namespace App\Traits;
 
 use App\Models\Report;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-Trait ReportableTrait
+Trait HasReport
 {
     /**
      * Get all the user's reports.

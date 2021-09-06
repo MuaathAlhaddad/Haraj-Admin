@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\ReportableTrait;
+use App\Traits\HasReport;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,12 +10,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
-    use HasFactory, ReportableTrait, SoftDeletes;
+    use HasFactory, HasReport, SoftDeletes;
 
     protected $fillable = [
         'body',
     ];
-    
+
     /**********************************
      *           Relations
      ********************************/
