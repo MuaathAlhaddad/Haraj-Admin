@@ -207,4 +207,31 @@ mutation {
             }
         }
     }
+
+    query {
+        car_brands: taxonomyContent(where: { column: TITLE, value: "cars" }) {
+            id
+            title
+            children {
+                id
+                title
+            }
+            parent {
+                id
+                title
+            }
+        }
+        toyota_types: taxonomyContent(where: { column: TITLE, value: "toyota" }) {
+            id
+            title
+            children {
+                id
+                title
+            }
+            parent {
+                id
+                title
+            }
+        }
+    }
 ```

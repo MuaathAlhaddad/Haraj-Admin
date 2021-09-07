@@ -1,6 +1,8 @@
 extend type Query {
     taxonomyContents(
         orderBy: _ @orderBy(columnsEnum: "TaxonomyContentColumns")
+        parent: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
+        children: _ @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
         where: _ @whereConditions(columnsEnum: "TaxonomyContentColumns")
     ): [TaxonomyContent!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -13,9 +15,11 @@ type TaxonomyContent {
     id: ID!
     title: String!
     description: String
-    parent: TaxonomyContent @method(name: "parent")
+#    parent: TaxonomyContent @method(name: "parent")
+    parent: TaxonomyContent @belongsTo
     harajs: [TaxonomyContent!]! @method(name: "harajs")
     tags: [TaxonomyContent!]! @method(name: "tags")
+    children: [TaxonomyContent!]! @hasMany
     brands: [TaxonomyContent!]! @hasMany
     models: [TaxonomyContent!]! @hasMany
     types: [TaxonomyContent!]! @hasMany

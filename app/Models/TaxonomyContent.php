@@ -83,9 +83,9 @@ class TaxonomyContent extends Model
      * Get the taxonomyContent parent
      * @return TaxonomyContent
      */
-    public function parent()
+    public function parent(): BelongsTo
     {
-        return self::find($this->parent_id);
+        return $this::belongsTo(TaxonomyContent::class, 'parent_id', 'id');
     }
 
     /**
@@ -125,8 +125,8 @@ class TaxonomyContent extends Model
      * Get the taxomomyContent children
      * @return
      */
-//    public function children(): HasMany
-//    {
-//        return $this->hasMany(TaxonomyContent::class)->whereParentId(self::getKey());
-//    }
+    public function children(): HasMany
+    {
+        return $this->hasMany(TaxonomyContent::class, 'parent_id', 'id');
+    }
 }
