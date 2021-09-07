@@ -180,6 +180,7 @@ enum FavoriteColumns {
     ID
     FAVORITEABLE_ID
     FAVORITEABLE_TYPE
+    USER_ID
     DELETED_AT
     CREATED_AT
     UPDATED_AT
