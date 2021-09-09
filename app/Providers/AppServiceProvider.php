@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Relation::morphMap([
             'ad' => 'App\Models\Ad',
+            'user' => 'App\Models\User',
         ]);
     }
 }

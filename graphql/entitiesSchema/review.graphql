@@ -1,3 +1,6 @@
+extend type Mutation {
+    createReview(input: CreateReviewInput! @spread): Review @create
+}
 extend type Query {
     reviews(orderBy: _ @orderBy(columnsEnum: "ReviewColumns")): [Review!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -7,12 +10,38 @@ extend type Query {
 type Review{
     id: ID!
     body: String!
-    star: Int
+    star: Int!
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     reviewer: User @belongsTo
-    reviewee: User @belongsTo
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)
+    reviewable: Reviewable! @morphTo
 }
+union Reviewable = Ad | User
 
+
+
+
+input CreateReviewInput {
+    body: String!
+    star: ReviewStar!
+    reviewable: CreateReviewableMorphTo
+    reviewer: CreateReviewerBelongsTo
+}
+input CreateReviewerBelongsTo {
+    connect: ID
+}
+input CreateReviewableMorphTo {
+    connect: ConnectReviewableInput
+    disconnect: Boolean
+    delete: Boolean
+}
+input ConnectReviewableInput {
+    type: ReviewableTypes!
+    id: ID!
+}
+enum ReviewableTypes {
+    ad
+    user
+}

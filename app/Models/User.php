@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\HasAttachment;
 use App\Traits\HasMetadata;
 use App\Traits\HasReport;
+use App\Traits\HasReview;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -17,7 +18,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes,
         HasReport, HasAttachment,
-        HasMetadata, HasApiTokens;
+        HasMetadata, HasApiTokens, HasReview;
 
     /**
      * The attributes that are mass assignable.
@@ -107,16 +108,6 @@ class User extends Authenticatable
     public function comments(): HasMany
     {
         return $this->hasMany(Comment::class);
-    }
-
-    /**
-     * Get the user's reviews
-     *
-     * @return HasMany
-     */
-    public function reviews(): HasMany
-    {
-        return $this->hasMany(Review::class);
     }
 
     /**

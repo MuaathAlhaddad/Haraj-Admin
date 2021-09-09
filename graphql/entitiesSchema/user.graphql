@@ -48,7 +48,7 @@ type User {
     state: State @belongsTo
     messages: [Message!]! @hasMany(type: PAGINATOR, defaultCount: 10)
     comments: [Comment!]! @hasMany(type: PAGINATOR, defaultCount: 10)
-    reviews: [Review!]! @hasMany(type: PAGINATOR, defaultCount: 10)
+    reviews: [Review!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     attachments: [Attachment!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     metadata: [Metadata!]! @morphMany(type: PAGINATOR, defaultCount: 10)
     reports: [Report!]! @morphMany(type: PAGINATOR, defaultCount: 10)

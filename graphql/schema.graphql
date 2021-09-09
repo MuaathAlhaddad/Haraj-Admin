@@ -79,11 +79,11 @@ enum ReviewColumns {
     UPDATED_AT
 }
 enum ReviewStar {
-    STAR1
-    STAR2
-    STAR3
-    STAR4
-    STAR5
+    STAR1 @enum(value: 0)
+    STAR2 @enum(value: 1)
+    STAR3 @enum(value: 2)
+    STAR4 @enum(value: 3)
+    STAR5 @enum(value: 4)
 }
 ###################( Message )############################
 enum MessageColumns {
@@ -186,6 +186,15 @@ enum FavoriteColumns {
     CREATED_AT
     UPDATED_AT
 }
+###################( Review )############################
+enum ReviewColumns {
+    ID
+    BODY
+    STAR
+    DELETED_AT
+    CREATED_AT
+    UPDATED_AT
+}
 
 # Ad
 # Attachment
@@ -194,7 +203,6 @@ enum FavoriteColumns {
 # Message
 # Metadata
 # Report
-# Review
 # Setting
 # State
 # Taxonomy

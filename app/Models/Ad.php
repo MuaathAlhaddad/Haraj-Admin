@@ -6,6 +6,7 @@ use App\Traits\HasAttachment;
 use App\Traits\HasFavorite;
 use App\Traits\HasMetadata;
 use App\Traits\HasReport;
+use App\Traits\HasReview;
 use BinaryCats\Sku\Concerns\SkuOptions;
 use BinaryCats\Sku\HasSku;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,7 +22,7 @@ class Ad extends Model
 
     use HasFactory, HasReport, HasReport,
         HasAttachment, HasMetadata, SoftDeletes,
-        HasFavorite, HasSku;
+        HasFavorite, HasSku, HasReview;
 
     protected $fillable = [
         'title',

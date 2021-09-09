@@ -234,4 +234,54 @@ mutation {
             }
         }
     }
+    # Write your query or mutation here
+    mutation {
+        createReview(
+            input: {
+                body: "this seller is crazy man"
+                star: STAR1
+                reviewer: { connect: 1 }
+                reviewable: { connect: { type: user, id: 2 } }
+            }
+        ) {
+            id
+            body
+            star
+            reviewer {
+                id
+                name
+            }
+            reviewable {
+                __typename
+                ... on User {
+                    id
+                    name
+                }
+            }
+        }
+    }
+    query {
+        user_reviews: currentUser {
+            id
+            name
+            reviews {
+                data {
+                    id
+                    body
+                    star
+                }
+            }
+        }
+        ad_reviews: ad(where: { column: ID, value: 1 }) {
+            id
+            title
+            reviews {
+                data {
+                    id
+                    body
+                    star
+                }
+            }
+        }
+    }
 ```
