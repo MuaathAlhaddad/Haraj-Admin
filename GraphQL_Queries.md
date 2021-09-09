@@ -284,4 +284,41 @@ mutation {
             }
         }
     }
+    query {
+        all_comments: comments {
+            data {
+                id
+                body
+            }
+        }
+        user_comments: user(id: 1) {
+            name
+            comments {
+                data {
+                    body
+                }
+            }
+        }
+        ad_comments: ad(where: { column: ID, value: 1 }) {
+            title
+            comments {
+                data {
+                    body
+                }
+            }
+        }
+    }
+    mutation {
+        createComment(
+            input: {
+                body: "this is a new comment"
+                user: { connect: 1 }
+                ad: { connect: 2 }
+            }
+        ) {
+            id
+            body
+        }
+    }
+
 ```
