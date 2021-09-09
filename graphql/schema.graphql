@@ -166,6 +166,7 @@ enum TaxonomyColumns {
 ###################( TaxonomyContent )############################
 enum TaxonomyContentColumns {
     ID
+    PARENT_ID
     TITLE
     DESCRIPTION
     LANG
