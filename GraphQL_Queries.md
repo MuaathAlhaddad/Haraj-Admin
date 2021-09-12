@@ -320,5 +320,24 @@ mutation {
             body
         }
     }
-
+    mutation {
+        createMessage(input: {
+            body: "this is my new message"
+            sender: {
+                connect: 1
+            }
+            recipient: {
+                connect: 2
+            }
+        }) {
+            id
+            body
+            sender{
+                name
+            }
+            recipient{
+                name
+            }
+        }
+    }
 ```

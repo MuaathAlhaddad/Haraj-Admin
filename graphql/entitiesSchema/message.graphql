@@ -1,3 +1,7 @@
+extend type Mutation {
+    createMessage(input: CreateMessageInput! @spread): Message @create
+}
+
 extend type Query {
     messages(orderBy: _ @orderBy(columnsEnum: "MessageColumns")): [Message!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -15,3 +19,16 @@ type Message{
     recipient: User @belongsTo
 }
 
+input CreateMessageInput {
+    body: String!
+    sender: CreateSenderBelongsTo
+    recipient: CreateRecipientBelongsTo
+}
+
+input CreateRecipientBelongsTo {
+    connect: ID
+}
+
+input CreateSenderBelongsTo {
+    connect: ID
+}
