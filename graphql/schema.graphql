@@ -90,6 +90,8 @@ enum MessageColumns {
     ID
     BODY
     SEEN_AT
+    FROM_ID
+    TO_ID
     DELETED_AT
     CREATED_AT
     UPDATED_AT

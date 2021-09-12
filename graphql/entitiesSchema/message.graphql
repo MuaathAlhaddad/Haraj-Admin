@@ -3,7 +3,12 @@ extend type Mutation {
 }
 
 extend type Query {
-    messages(orderBy: _ @orderBy(columnsEnum: "MessageColumns")): [Message!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    messages(
+        orderBy: _ @orderBy(columnsEnum: "MessageColumns")
+        where: _ @whereConditions(columnsEnum: "MessageColumns")
+        sender: _@whereHasConditions(columnsEnum: "UserColumns")
+        recipient: _@whereHasConditions(columnsEnum: "UserColumns")
+    ): [Message!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
     message(id: ID @eq): Message @find
 }

@@ -340,4 +340,43 @@ mutation {
             }
         }
     }
+    query {
+        # get all users the curent user intracted with
+        interacted_users: messages(
+            where: { OR: [{ column: FROM_ID, value: 1 }, { column: TO_ID, value: 1 }] }
+            orderBy: { column: CREATED_AT, order: ASC }
+        ) {
+            data {
+                sender {
+                    id
+                    name
+                }
+            }
+        }
+
+        #   get all messages with the particular user
+        messages(
+            where: {
+                OR: [
+                    { AND: [{ column: FROM_ID, value: 2 }, { column: TO_ID, value: 1 }] }
+                    { AND: [{ column: FROM_ID, value: 1 }, { column: TO_ID, value: 2 }] }
+                ]
+            }
+            orderBy: { column: CREATED_AT, order: ASC }
+        ) {
+            data {
+                body
+                created_at
+                sender {
+                    id
+                    name
+                }
+                recipient {
+                    id
+                    name
+                }
+            }
+        }
+    }
+
 ```

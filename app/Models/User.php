@@ -91,13 +91,23 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the user's messages
+     * Get the user's sent messages
      *
      * @return HasMany
      */
-    public function messages(): HasMany
+    public function from_messages(): HasMany
     {
-        return $this->hasMany(Message::class);
+        return $this->hasMany(Message::class, 'from_id', 'id');
+    }
+
+    /**
+     * Get the user's received messages
+     *
+     * @return HasMany
+     */
+    public function to_messages(): HasMany
+    {
+        return $this->hasMany(Message::class, 'to_id', 'id');
     }
 
     /**
