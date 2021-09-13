@@ -19,6 +19,7 @@ class CreateReviewsTable extends Migration
             $table->integer('reviewable_id');
             $table->string('reviewable_type');
             $table->foreignId('reviewer_id')->constrained('users');
+            $table->dateTime('seen_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
             $table->enum('star', [1, 2, 3, 4, 5])->nullable();

@@ -18,6 +18,7 @@ class CreateReportsTable extends Migration
             $table->string('name');
             $table->integer('reportable_id');
             $table->string('reportable_type');
+            $table->dateTime('seen_at')->nullable();
             $table->enum('type', ["comment, ad, user, review"]);
             $table->softDeletes();
             $table->timestamps();

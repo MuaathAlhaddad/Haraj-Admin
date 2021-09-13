@@ -18,6 +18,7 @@ class CreateCommentsTable extends Migration
             $table->string('body');
             $table->foreignId('ad_id')->constrained('ads');
             $table->foreignId('user_id')->constrained('users');
+            $table->dateTime('seen_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
