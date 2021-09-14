@@ -65,6 +65,7 @@ enum AdColumns {
 enum CommentColumns {
     ID
     Body
+    SEEN_AT
     DELETED_AT
     CREATED_AT
     UPDATED_AT
