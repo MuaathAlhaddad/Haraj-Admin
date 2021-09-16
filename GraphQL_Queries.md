@@ -485,4 +485,12 @@ mutation {
         # }
     }
 
+    mutation {
+        loginAdmin(input: { email: "admin@example.com", password: "admin" }) {
+            access_token
+            token_type
+            isAdmin
+        }
+    }
+
 ```

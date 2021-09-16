@@ -19,8 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('phone_no')->unique();
+            $table->string('phone_no')->unique()->nullable();
             $table->enum('gender', ['f', 'm'])->nullable();
+            $table->boolean('isAdmin')->nullable()->default(false);
             $table->foreignId('country_id')->nullable()->constrained('countries');
             $table->foreignId('state_id')->nullable()->constrained('states');
             $table->rememberToken();

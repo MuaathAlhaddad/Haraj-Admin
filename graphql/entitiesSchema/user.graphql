@@ -13,6 +13,8 @@ extend type Mutation {
 
     logout: LogoutResponse! @guard
 
+    loginAdmin(input: LoginAdminInput! @spread): AdminAccessToken
+
     validateEmail(email: String @eq  @rules(apply: ["required", "unique:users,email", "regex:/^.+@.+$/i"])): User @first
 
     deleteUser(id: ID!): User @delete
@@ -85,9 +87,18 @@ input LoginUserInput {
     phone_no: String
     password: String
 }
+input LoginAdminInput {
+    email: String
+    password: String
+}
 type AccessToken {
     access_token: String
     token_type: String
+}
+type AdminAccessToken {
+    access_token: String
+    token_type: String
+    isAdmin: Boolean
 }
 type LogoutResponse {
     status: LogoutStatus!
