@@ -15,6 +15,9 @@ extend type Mutation {
 
     validateEmail(email: String @eq  @rules(apply: ["required", "unique:users,email", "regex:/^.+@.+$/i"])): User @first
 
+    deleteUser(id: ID!): User @delete
+
+    restoreUser(id: ID!): User @restore
 }
 
 extend type Query {

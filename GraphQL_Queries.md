@@ -379,4 +379,110 @@ mutation {
         }
     }
 
+
+    #################################
+    # Ad Query and Mutation
+    ################################
+    # mutation {
+    # deleteAd(id:54){
+    #   id
+    #   sku
+    # }
+
+    # restoreAd(id:54) {
+    #   id
+    #   title
+    # }
+
+    # updateAd(
+    #   id: 55
+    #   input: { title: "new title", description: "new desc", price: 12 }
+    # ) {
+    #   id
+    #   title
+    #   description
+    #   price
+    # }
+    # }
+    # query{
+    #   to get only the deleted ads
+    # ads(trashed:ONLY){
+    #   data{
+    #     id
+    #     sku
+    #     title
+    #     description
+    #   }
+    # }
+    #   to get all deleted and not deleted
+    # ads(trashed:WITH){
+    #   data{
+    #     id
+    #     sku
+    #     title
+    #     description
+    #   }
+    # }
+    # }
+
+    #################################
+    # TaxonomyContent Query and Mutation
+    ################################
+    mutation {
+        # createTaxonomyContent(input:{
+        #   title: "proton"
+        #   description: "this is a new brand category"
+        #   taxonomy: {connect:2}
+        #   parent:{connect:1}
+        #   lang:en
+        # }
+        # ){
+        #   id
+        #   title
+        #   description
+        #   taxonomy{
+        #     type
+        #   }
+        #   parent{
+        #     title
+        #   }
+        # }
+
+        #   create new harajs with icon
+        # createTaxonomyContent(
+        #   input: {
+        #     title: "brids"
+        #     description: "this is a new haraj category"
+        #     taxonomy: { connect: 1 }
+        #     lang: en
+        #     icon: "fas fa-horse"
+        #   }
+        # ) {
+        #   id
+        #   title
+        #   icon
+        #   description
+        #   taxonomy {
+        #     type
+        #   }
+        # }
+    }
+
+    #################################
+    # User Query and Mutation
+    ################################
+    mutation{
+        #   deleteUser(id:1){
+        #     id
+        #     name
+        #     email
+        #   }
+
+        # restoreUser(id:1){
+        #   id
+        #   name
+        #   email
+        # }
+    }
+
 ```

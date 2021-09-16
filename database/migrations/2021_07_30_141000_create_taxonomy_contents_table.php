@@ -20,7 +20,7 @@ class CreateTaxonomyContentsTable extends Migration
             $table->foreignId('taxonomy_id')->constrained('taxonomies');
             $table->integer('parent_id')->nullable();
             $table->string('lang')->nullable();
-            $table->json('icon')->nullable();
+            $table->string('icon')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->softDeletes();
             $table->timestamps();

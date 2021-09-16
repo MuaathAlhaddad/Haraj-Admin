@@ -1,3 +1,6 @@
+extend type Mutation {
+        createTaxonomyContent(input: createTaxonomyContentInput! @spread): TaxonomyContent @create
+}
 extend type Query {
     taxonomyContents(
         orderBy: _ @orderBy(columnsEnum: "TaxonomyContentColumns")
@@ -25,11 +28,25 @@ type TaxonomyContent {
     models: [TaxonomyContent!]! @hasMany
     types: [TaxonomyContent!]! @hasMany
     lang: String
-    icon: [String]
+    icon: String
     published_at: DateTime
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     taxonomy: Taxonomy @belongsTo
     ads: [Ad!]! @belongsToMany
+}
+input createTaxonomyContentInput {
+    title: String!
+    description: String
+    taxonomy: CreateTaxonomyBelongsTo!
+    parent: CreateTaxonomyContentParent
+    icon: String
+    lang: Languages!
+}
+input CreateTaxonomyBelongsTo {
+    connect: ID
+}
+input CreateTaxonomyContentParent {
+    connect: ID
 }

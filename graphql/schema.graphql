@@ -198,7 +198,10 @@ enum ReviewColumns {
     CREATED_AT
     UPDATED_AT
 }
-
+enum Languages {
+    en
+    ar
+}
 # Ad
 # Attachment
 # Comment

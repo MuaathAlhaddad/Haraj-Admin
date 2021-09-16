@@ -14,14 +14,6 @@ class TaxonomyContent extends Model
 {
     use HasFactory, SoftDeletes;
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'icon' => 'array',
-    ];
 
     /************************
      *        Types
@@ -85,7 +77,7 @@ class TaxonomyContent extends Model
      */
     public function parent(): BelongsTo
     {
-        return $this::belongsTo(TaxonomyContent::class, 'parent_id', 'id');
+        return $this->belongsTo(TaxonomyContent::class, 'parent_id', 'id');
     }
 
     /**
