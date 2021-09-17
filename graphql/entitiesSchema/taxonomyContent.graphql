@@ -1,5 +1,11 @@
 extend type Mutation {
-        createTaxonomyContent(input: createTaxonomyContentInput! @spread): TaxonomyContent @create
+    createTaxonomyContent(input: createTaxonomyContentInput! @spread): TaxonomyContent @create
+
+    updateTaxonomyContent(id: ID!, input: updateTaxonomyContentInput! @spread): TaxonomyContent @update
+
+    deleteTaxonomyContent(id: ID!): TaxonomyContent @delete
+
+    restoreTaxonomyContent(id: ID!): TaxonomyContent @restore
 }
 extend type Query {
     taxonomyContents(
@@ -43,6 +49,14 @@ input createTaxonomyContentInput {
     parent: CreateTaxonomyContentParent
     icon: String
     lang: Languages!
+}
+input updateTaxonomyContentInput {
+    title: String
+    description: String
+    taxonomy: CreateTaxonomyBelongsTo
+    parent: CreateTaxonomyContentParent
+    icon: String
+    lang: Languages
 }
 input CreateTaxonomyBelongsTo {
     connect: ID

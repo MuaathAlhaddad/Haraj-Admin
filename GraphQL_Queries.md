@@ -493,4 +493,62 @@ mutation {
         }
     }
 
+    #########################################
+    # update, delete and restore taxonomyContent
+    ########################################
+    mutation {
+        # createTaxonomyContent(input:{
+        #   title: "test taxno"
+        #   description:"this is a test taxonomycontent"
+        #   taxonomy: {connect:1}
+        #   icon:"new icon"
+        #   lang:en
+        # }) {
+        #   id
+        #   title
+        #   description
+        #   parent{
+        #     id
+        #     title
+        #   }
+        #   taxonomy{
+        #     id
+        #     type
+        #   }
+        # }
+        # updateTaxonomyContent(
+        #   id: 309
+        #   input: {
+        #     title: "change the title please"
+        #     description: "change the desc too"
+        #     taxonomy: { connect: 2 }
+        #     parent: { connect: 2 }
+        #     icon: "fa amer-face"
+        #     lang: ar
+        #   }
+        # ) {
+        #   id
+        #   title
+        #   description
+        #   parent {
+        #     id
+        #     title
+        #   }
+        #   taxonomy {
+        #     id
+        #     type
+        #   }
+        # }
+        # deleteTaxonomyContent(id:309){
+        #   id
+        #   title
+        #   deleted_at
+        # }
+        # restoreTaxonomyContent(id:309){
+        #   id
+        #   title
+        #   deleted_at
+        # }
+    }
+
 ```
