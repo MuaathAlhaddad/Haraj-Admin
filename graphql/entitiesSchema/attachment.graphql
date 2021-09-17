@@ -1,3 +1,6 @@
+extend type Mutation {
+    createAttachment(input: CreateAttachmentInputs!): Attachment! @create
+}
 extend type Query {
     attachments(orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")): [Attachment!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -12,10 +15,32 @@ type Attachment{
     path: String!
     disk_name: String
     file_name: String!
-    thumbnail: Int
+    thumbnail: Boolean
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     attachable: Attachable! @morphTo
 }
 union Attachable = Ad | User
+
+input CreateAttachmentInputs {
+    path: String
+    disk_name: String
+    type: AttachmentTypes!
+    file_name: String
+    thumbnail: Boolean
+    attachable: CreateAttachableMorphTo
+}
+input CreateAttachableMorphTo {
+    connect: ConnectAttachableInput
+    disconnect: Boolean
+    delete: Boolean
+}
+input ConnectAttachableInput {
+    type: AttachableTypes!
+    id: ID!
+}
+enum AttachableTypes {
+    ad
+    user
+}
