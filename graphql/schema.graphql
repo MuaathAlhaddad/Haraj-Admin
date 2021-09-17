@@ -116,7 +116,7 @@ enum AttachmentTypes {
     DOCUMENT
     AUDIO
     VIDEO
-    OTHER
+    OTHERS
 }
 ###################( Metadata )############################
 enum MetadataColumns {

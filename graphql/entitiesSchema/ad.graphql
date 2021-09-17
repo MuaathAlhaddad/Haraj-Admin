@@ -70,7 +70,15 @@ input CreateTaxonomyContentBelongsToMany {
 }
 input CreateAttachmentBelongsToMany {
     connect: [ID!]
+    create: CreateAttachmentHasManyInputs
 }
 input DeleteAdInput {
     delete: ID
+}
+input CreateAttachmentHasManyInputs {
+    path: String
+    disk_name: String
+    type: AttachmentTypes!
+    file_name: String
+    thumbnail: Boolean
 }
