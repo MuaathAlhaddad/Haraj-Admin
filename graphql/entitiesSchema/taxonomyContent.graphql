@@ -15,6 +15,7 @@ extend type Query {
         taxonomy: _ @whereHasConditions(columnsEnum: "TaxonomyColumns")
         where: _ @whereConditions(columnsEnum: "TaxonomyContentColumns")
     ): [TaxonomyContent!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    @softDeletes
 
     taxonomyContent(
         where: _ @whereConditions(columnsEnum: "TaxonomyContentColumns")
