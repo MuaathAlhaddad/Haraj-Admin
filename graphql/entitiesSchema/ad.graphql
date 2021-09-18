@@ -13,9 +13,7 @@ extend type Query {
         where: _ @whereConditions(columnsEnum: "AdColumns")
         taxonomyContents: _
             @whereHasConditions(columnsEnum: "TaxonomyContentColumns")
-    ): [Ad!]!
-    @softDeletes
-    @paginate(type: PAGINATOR, defaultCount: 10)
+    ): [Ad!]! @softDeletes @paginate(type: PAGINATOR, defaultCount: 10)
 
     ad(
         where: _ @whereConditions(columnsEnum: "AdColumns")
@@ -57,7 +55,7 @@ input CreateAdInput @validator {
     taxonomyContents: CreateTaxonomyContentBelongsToMany
     attachments: CreateAttachmentBelongsToMany
 }
-input UpdateAdInput @validator{
+input UpdateAdInput @validator {
     title: String
     description: String
     price: Float
@@ -70,7 +68,7 @@ input CreateTaxonomyContentBelongsToMany {
 }
 input CreateAttachmentBelongsToMany {
     connect: [ID!]
-    create: CreateAttachmentHasManyInputs
+    create: [CreateAttachmentHasManyInputs]!
 }
 input DeleteAdInput {
     delete: ID
