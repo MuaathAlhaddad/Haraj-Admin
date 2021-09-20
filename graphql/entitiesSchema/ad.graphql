@@ -59,6 +59,7 @@ input UpdateAdInput @validator {
     title: String
     description: String
     price: Float
+    attachments: CreateAttachmentBelongsToMany
 }
 input CreateUserBelongsTo {
     connect: ID

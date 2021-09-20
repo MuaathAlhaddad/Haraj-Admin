@@ -1,13 +1,17 @@
 extend type Mutation {
     createAttachment(input: CreateAttachmentInputs!): Attachment! @create
+
+    deleteAttachment(attachable_id: Int!): Attachment @delete
 }
 extend type Query {
-    attachments(orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")): [Attachment!]! @paginate(type: PAGINATOR, defaultCount: 10)
+    attachments(
+        orderBy: _ @orderBy(columnsEnum: "AttachmentColumns")
+    ): [Attachment!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
     attachment(id: ID @eq): Attachment @find
 }
 
-type Attachment{
+type Attachment {
     id: ID!
     attachable_id: Int!
     attachable_type: String!
