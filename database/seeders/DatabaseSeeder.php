@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             Taxonomy_contentSeeder::class,
             AdTaxonomyContentSeeder::class,
             FavoriteSeeder::class,
+            AttachmentSeeder::class
         ]);
     }
 }

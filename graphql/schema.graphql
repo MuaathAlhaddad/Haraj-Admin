@@ -112,11 +112,11 @@ enum AttachmentColumns {
     UPDATED_AT
 }
 enum AttachmentTypes {
-    PHOTO
-    DOCUMENT
-    AUDIO
-    VIDEO
-    OTHERS
+    PHOTO @enum(value: "photo")
+    DOCUMENT @enum(value: "document")
+    AUDIO @enum(value: "audio")
+    VIDEO @enum(value: "video")
+    OTHERS @enum(value: "others")
 }
 ###################( Metadata )############################
 enum MetadataColumns {

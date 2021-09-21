@@ -17,8 +17,8 @@ class CreateAttachmentsTable extends Migration
             $table->id();
             $table->integer('attachable_id');
             $table->string('attachable_type');
-            $table->enum('type', ["photo, document, audio, video, others"]);
-            $table->string('path');
+            $table->enum('type', ["photo", "document", "audio", "video", "others"]);
+            $table->longText('path');
             $table->string('disk_name')->nullable();
             $table->string('file_name');
             $table->boolean('thumbnail')->nullable();                                                           
