@@ -6,6 +6,7 @@ use App\Traits\HasAttachment;
 use App\Traits\HasMetadata;
 use App\Traits\HasReport;
 use App\Traits\HasReview;
+use App\Traits\RelationsToCascade;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -17,7 +18,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes,
-        HasReport, HasAttachment,
+        HasReport, HasAttachment, RelationsToCascade,
         HasMetadata, HasApiTokens, HasReview;
 
     /**
@@ -130,15 +131,5 @@ class User extends Authenticatable
         return $this->hasMany(Favorite::class);
     }
 
-    /**
-     * The "booted" method of the model.
-     *
-     * @return void
-     */
-    protected static function booted()
-    {
-        static::created(function ($user) {
-            $user->update(['phone_verified_at' => now()]);
-        });
-    }
+
 }
