@@ -551,4 +551,137 @@ mutation {
         # }
     }
 
+    query {
+        user(id: 1) {
+            id
+            attachments {
+                data {
+                    id
+                    attachable_id
+                    attachable_type
+                    path
+                }
+            }
+        }
+    }
+
+    mutation {
+        # login(input: { phone_no: "09504644684", password: "password" }) {
+        #   access_token
+        #   token_type
+        # }
+        updateUser(
+            id: 1
+            input: {
+                name: "muaath"
+                gender: "m"
+                email: "muaath2000@gmail.com"
+                password: "password"
+                country: { connect: 3 }
+                state: { connect: 2 }
+                attachments: {
+                    create: {
+                        file_name: "profile"
+                        type: PHOTO
+                        thumbnail: true
+                        path: "https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg"
+                    }
+                    delete: [62, 63, 64]
+                }
+            }
+        ) {
+            id
+            name
+            email
+            attachments {
+                data {
+                    id
+                    attachable_id
+                    attachable_type
+                    type
+                    path
+                }
+            }
+        }
+    }
+
+    # Write your query or mutation here
+    mutation {
+        createReportContent(input: { body: "wrong info", type: option }) {
+            id
+            body
+            type
+        }
+        createReport(
+            input: {
+                body: null
+                reporter: { connect: 1 }
+                reportContent: { connect: 1 }
+                reportable: { connect: { type: ad, id: 1 } }
+            }
+        ) {
+            id
+            body
+            reporter {
+                id
+                name
+            }
+            reportContent {
+                type
+            }
+            reportable {
+                __typename
+                ... on Ad {
+                    id
+                    sku
+                }
+            }
+        }
+    }
+
+    # Write your query or mutation here
+    query {
+        reportContents {
+            id
+            body
+            type
+            reports {
+                data {
+                    body
+                    reporter {
+                        id
+                        name
+                    }
+                    reportable {
+                        __typename
+                        ... on Ad {
+                            id
+                            sku
+                        }
+                    }
+                }
+            }
+        }
+        reports {
+            data {
+                id
+                body
+                reporter {
+                    id
+                    name
+                }
+                reportContent {
+                    type
+                }
+                reportable {
+                    __typename
+                    ... on Ad {
+                        id
+                        sku
+                    }
+                }
+            }
+        }
+    }
+
 ```

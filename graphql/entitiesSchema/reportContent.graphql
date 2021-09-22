@@ -1,0 +1,26 @@
+extend type Mutation {
+    createReportContent(input: CreateReportContentInput! @spread): ReportContent @create
+}
+extend type Query {
+    reportContents: [ReportContent!]! @all
+
+    reportContent(id: ID @eq): ReportContent @find
+}
+
+type ReportContent {
+    id: ID!
+    body: String
+    type: ReportTypes!
+    reports: [Report!] @hasMany(type: PAGINATOR, defaultCount: 10)
+    created_at: DateTime
+    updated_at: DateTime
+}
+
+input CreateReportContentInput {
+    body: String!
+    type: ReportTypes!
+}
+enum ReportTypes {
+    question
+    option
+}

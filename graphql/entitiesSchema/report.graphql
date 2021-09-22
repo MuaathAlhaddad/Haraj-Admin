@@ -1,3 +1,8 @@
+extend type Mutation {
+
+    createReport(input: CreateReportInput! @spread): Report @create
+
+}
 extend type Query {
     reports(orderBy: _ @orderBy(columnsEnum: "ReportColumns")): [Report!]! @paginate(type: PAGINATOR, defaultCount: 10)
 
@@ -6,13 +11,40 @@ extend type Query {
 
 type Report {
     id: ID!
-    name: String!
+    body: String
     reportable_id: Int!
     reportable_type: String!
-    type: String!
+    reporter: User @belongsTo
+    reportContent: ReportContent @belongsTo
     deleted_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     reportable: Reportable! @morphTo
 }
 union Reportable = Ad | User | Review | Comment
+
+input CreateReportInput {
+    body: String
+    reporter: CreateUserBelongsTo
+    reportContent: CreateReportContentBelongsTo
+    reportable: CreateReportableMorphTo
+}
+
+input CreateReportableMorphTo {
+    connect: ConnectReportableInput
+    disconnect: Boolean
+    delete: Boolean
+}
+input ConnectReportableInput {
+    type: ReportableTypes!
+    id: ID!
+}
+enum ReportableTypes {
+    ad
+    user
+    review
+    comment
+}
+input CreateReportContentBelongsTo {
+    connect: ID
+}

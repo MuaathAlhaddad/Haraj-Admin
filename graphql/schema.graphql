@@ -135,10 +135,9 @@ enum MetadataColumns {
 ###################( Report )############################
 enum ReportColumns {
     ID
-    NAME
+    BODY
     REPORTABLE_ID
     REPORTABLE_TYPE
-    TYPE
     DELETED_AT
     CREATED_AT
     UPDATED_AT
