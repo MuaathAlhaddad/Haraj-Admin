@@ -7,7 +7,7 @@ extend type Mutation {
 
     createUser(input: CreateUserInput! @spread): User @create
 
-    updateUser(id: ID!, input: UpdateUserInput! @spread): User @update @guard
+    updateUser(input: UpdateUserInput! @spread): User @update @guard
 
     login(input: LoginUserInput! @spread): AccessToken!
 
@@ -69,6 +69,7 @@ input CreateUserInput @validator {
     state: CreateStateBelongsTo
 }
 input UpdateUserInput @validator {
+    id: ID
     name: String
     email: String
     password: String @hash
