@@ -62,6 +62,126 @@ class AdTaxonomyContentSeeder extends Seeder
             array('ad_id' => 5, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
             array('ad_id' => 5, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
             array('ad_id' => 5, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 12, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 12, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 12, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 12, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 13, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 13, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 13, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 13, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>14, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>14, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>14, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>14, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 15, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 15, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 15, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 15, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 16, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 16, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 16, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 16, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>17, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>17, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>17, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>17, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 18, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 18, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 18, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 18, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 19, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 19, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 19, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 19, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 20, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 20, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 20, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 20, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>21, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>21, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>21, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>21, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 22, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 22, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 22, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 22, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>23, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>23, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>23, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>23, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 24, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 24, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 24, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 24, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>25, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>25, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>25, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>25, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 26, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 26, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 26, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 26, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 27, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 27, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 27, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 27, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' =>28, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' =>28, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' =>28, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' =>28, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 29, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 29, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 29, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 29, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 30, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 30, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 30, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 30, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 31, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 31, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 31, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 31, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 32, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 32, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 32, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 32, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 33, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 33, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 33, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 33, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 34, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 34, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 34, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 34, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
+
+            array('ad_id' => 35, 'taxonomy_content_id' => $cars_id, 'created_at' => now()),    // cars
+            array('ad_id' => 35, 'taxonomy_content_id' => $toyota_id, 'created_at' => now()),    // toyota
+            array('ad_id' => 35, 'taxonomy_content_id' => $corolla_id, 'created_at' => now()),  // corolla
+            array('ad_id' => 35, 'taxonomy_content_id' => $car_model_2022_id, 'created_at' => now()),  // 2020
         );
         DB::table('ad_taxonomy_content')->insert($ad_taxonomy_content);
 
