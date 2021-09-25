@@ -6,6 +6,7 @@ use App\Traits\HasAttachment;
 use App\Traits\HasMetadata;
 use App\Traits\HasReport;
 use App\Traits\HasReview;
+use App\Traits\MarkAsRead;
 use App\Traits\RelationsToCascade;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -19,7 +20,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes,
         HasReport, HasAttachment, RelationsToCascade,
-        HasMetadata, HasApiTokens, HasReview;
+        HasMetadata, HasApiTokens, HasReview, MarkAsRead;
 
     /**
      * The attributes that are mass assignable.

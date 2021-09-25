@@ -684,4 +684,12 @@ mutation {
         }
     }
 
+
+mutation{
+  markChatAsRead(to_id:1, from_id:2)
+
+  markReviewsRead(user_id:1)
+    
+  markCommentsRead(user_id:1)
+}
 ```

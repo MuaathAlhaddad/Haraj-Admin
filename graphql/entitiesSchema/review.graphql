@@ -1,5 +1,8 @@
 extend type Mutation {
     createReview(input: CreateReviewInput! @spread): Review @create
+
+    markReviewsRead(user_id: Int!): Int
+    @field(resolver: "App\\GraphQL\\Mutations\\MarkAsRead@reviews")
 }
 extend type Query {
     reviews(orderBy: _ @orderBy(columnsEnum: "ReviewColumns")): [Review!]! @paginate(type: PAGINATOR, defaultCount: 10)
@@ -12,6 +15,7 @@ type Review{
     body: String!
     star: Int!
     deleted_at: DateTime
+    seen_at: DateTime
     created_at: DateTime
     updated_at: DateTime
     reviewer: User @belongsTo

@@ -1,5 +1,9 @@
 extend type Mutation {
     createMessage(input: CreateMessageInput! @spread): Message @create
+
+    markChatAsRead(to_id: Int!, from_id: Int!): Int
+    @field(resolver: "App\\GraphQL\\Mutations\\MarkAsRead@chat")
+
 }
 
 extend type Query {

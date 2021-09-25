@@ -1,5 +1,8 @@
 extend type Mutation {
     createComment(input: CreateCommentInput! @spread): Comment @create
+
+    markCommentsRead(user_id: Int!): Int
+    @field(resolver: "App\\GraphQL\\Mutations\\MarkAsRead@comments")
 }
 
 extend type Query {
