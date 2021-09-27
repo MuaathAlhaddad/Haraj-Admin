@@ -119,7 +119,7 @@ class User extends Authenticatable
      */
     public function comments(): HasMany
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class)->orderBy('created_at', 'desc');
     }
 
     /**
@@ -129,7 +129,7 @@ class User extends Authenticatable
      */
     public function favorites(): HasMany
     {
-        return $this->hasMany(Favorite::class);
+        return $this->hasMany(Favorite::class)->orderBy('created_at', 'desc');
     }
 
 
