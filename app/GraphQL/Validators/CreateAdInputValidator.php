@@ -17,11 +17,9 @@ class CreateAdInputValidator extends Validator
         return [
             'title' => [
                 'required',
-                'max:20',
             ],
             'description' => [
                 'required',
-                'max:1000',
             ],
             'price' => [
                 'required',

@@ -17,8 +17,8 @@ class CreateAdsTable extends Migration
             $table->id();
             $table->string('sku')->unique();
             $table->string('title');
-            $table->string('description')->nullable();
-            $table->float('price', 10, 2);
+            $table->longText('description')->nullable();
+            $table->double('price', 20, 2);
             $table->foreignId('user_id')->constrained('users');
             $table->boolean('negotiable')->nullable();
             $table->enum('status', ['draft', 'pending', 'unpublished', 'published', 'sold']);
