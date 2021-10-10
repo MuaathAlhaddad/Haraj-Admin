@@ -393,17 +393,30 @@ mutation {
     #   id
     #   title
     # }
+    
+    mutation {
+        updateAd(
+            id: 55
+            input: {
+                title: "new title"
+                description: "new desc"
+                price: 12
+                attachments: { delete: [1, 2, 55], connect: [5] }
+            }
+        ) {
+            id
+            title
+            description
+            price
+            attachments {
+                data {
+                    id
+                    path
+                }
+            }
+        }
+    }
 
-    # updateAd(
-    #   id: 55
-    #   input: { title: "new title", description: "new desc", price: 12 }
-    # ) {
-    #   id
-    #   title
-    #   description
-    #   price
-    # }
-    # }
     # query{
     #   to get only the deleted ads
     # ads(trashed:ONLY){
