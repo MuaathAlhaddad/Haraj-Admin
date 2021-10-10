@@ -69,7 +69,7 @@ input CreateTaxonomyContentBelongsToMany {
 }
 input CreateAttachmentBelongsToMany {
     connect: [ID!]
-    create: [CreateAttachmentHasManyInputs]!
+    create: [CreateAttachmentHasManyInputs]
     delete: [ID!]
     connect: [ID!]
     disconnect: [ID!]
