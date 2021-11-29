@@ -17,7 +17,7 @@ class CreateMessagesTable extends Migration
             $table->id();
             $table->foreignId('from_id')->constrained('users');
             $table->foreignId('to_id')->constrained('users');
-            $table->string('body')->nullable();
+            $table->longText('body')->nullable();
             $table->dateTime('seen_at')->nullable();
             $table->softDeletes();
             $table->index(['from_id', 'to_id']);
