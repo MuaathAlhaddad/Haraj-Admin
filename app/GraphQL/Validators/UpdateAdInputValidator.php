@@ -16,12 +16,13 @@ class UpdateAdInputValidator extends Validator
     {
         return [
             'title' => [
-                'max:20',
+                'required',
             ],
             'description' => [
-                'max:1000',
+                'required',
             ],
-            'price' => [
+            'price' => [           
+                'required',
                 'numeric',
                 'regex:/^\d+(\.\d{1,2})?$/'
             ],
