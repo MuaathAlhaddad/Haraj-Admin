@@ -17,10 +17,11 @@ class Taxonomy extends Model
      ************************/
     const TYPE_HARAJS = 'harajs';
     const TYPE_BRANDS = 'brands';
-    const TYPE_TYPES = 'TYPES';
+    const TYPE_TYPES = 'types';
     const TYPE_MODELS = 'models';
     const TYPE_CATEGORIES = 'categories';
     const TYPE_TAGS = 'tags';
+    const TYPE_OTHERS = 'others';
 
     /************************
      *        Relations

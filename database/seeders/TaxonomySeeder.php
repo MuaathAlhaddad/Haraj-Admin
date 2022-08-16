@@ -23,6 +23,7 @@ class TaxonomySeeder extends Seeder
             array('id' => 4, 'type' => 'models', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
             array('id' => 5, 'type' => 'categories', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
             array('id' => 6, 'type' => 'tags', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
+            array('id' => 7, 'type' => 'others', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
         );
         DB::table('taxonomies')->insert($taxonomies);
     }

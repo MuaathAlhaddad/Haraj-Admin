@@ -15,15 +15,16 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
+        DB::table( 'users' )->delete();
 
-        \App\Models\User::factory(10)->create();
+        //\App\Models\User::factory(10)->create();
 
-        DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password'),
-            'isAdmin' => true
-        ]);
+        DB::table( 'users' )->insert( [
+            'name'     => 'admin',
+            'email'    => 'admin@example.com',
+            'phone_no' => '01128853086',
+            'password' => Hash::make( 'password' ),
+            'isAdmin'  => true
+        ] );
     }
 }

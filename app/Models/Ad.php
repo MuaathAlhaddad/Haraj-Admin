@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Ad extends Model
 {
 
-    use HasFactory, HasReport, HasReport,
+    use HasFactory, HasReport,
         HasAttachment, HasMetadata, SoftDeletes,
         HasFavorite, HasSku, HasReview;
 
@@ -37,15 +37,15 @@ class Ad extends Model
      *
      * @return SkuOptions
      */
-    public function skuOptions() : SkuOptions
+    public function skuOptions(): SkuOptions
     {
         return SkuOptions::make()
-            ->from(['price', 'user_id', 'created_at'])
-            ->target('sku')
-            ->using('-')
-            ->forceUnique(true)
-            ->generateOnCreate(true)
-            ->refreshOnUpdate(false);
+                         ->from( [ 'price', 'user_id', 'created_at' ] )
+                         ->target( 'sku' )
+                         ->using( '-' )
+                         ->forceUnique( true )
+                         ->generateOnCreate( true )
+                         ->refreshOnUpdate( false );
     }
 
     /**********************************
@@ -58,25 +58,27 @@ class Ad extends Model
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo( User::class );
     }
 
     /**
      * Get ad's comments
+     *
      * @return HasMany
      */
     public function comments(): HasMany
     {
-        return $this->hasMany(Comment::class)->orderBy('created_at', 'desc');
+        return $this->hasMany( Comment::class )->orderBy( 'created_at', 'desc' );
     }
 
     /**
      * Get ad's taxonomyContents
+     *
      * @return BelongsToMany
      */
     public function taxonomyContents(): BelongsToMany
     {
-        return $this->belongsToMany(TaxonomyContent::class, 'ad_taxonomy_content');
+        return $this->belongsToMany( TaxonomyContent::class, 'ad_taxonomy_content' );
     }
 
 }

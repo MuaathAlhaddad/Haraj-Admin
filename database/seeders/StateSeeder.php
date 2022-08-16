@@ -3238,6 +3238,7 @@ class StateSeeder extends Seeder
             array('name' => "Rennell and Bellona",'country_id' => 200),
             array('name' => "Temotu",'country_id' => 200),
             array('name' => "Western",'country_id' => 200),
+            //Start Somalia
             array('name' => "Awdal",'country_id' => 201),
             array('name' => "Bakol",'country_id' => 201),
             array('name' => "Banadir",'country_id' => 201),
@@ -3255,6 +3256,9 @@ class StateSeeder extends Seeder
             array('name' => "Shabellaha Hose",'country_id' => 201),
             array('name' => "Togdher",'country_id' => 201),
             array('name' => "Woqoyi Galbed",'country_id' => 201),
+            array('name' => "Puntland",'country_id' => 201),
+            array('name' => "Hargeisa",'country_id' => 201),
+            // End of Somalia
             array('name' => "Eastern Cape",'country_id' => 202),
             array('name' => "Free State",'country_id' => 202),
             array('name' => "Gauteng",'country_id' => 202),
