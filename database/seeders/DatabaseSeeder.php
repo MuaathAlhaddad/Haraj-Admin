@@ -34,5 +34,6 @@ class DatabaseSeeder extends Seeder
         ] );
 
         Excel::import( new AdsImport, 'Copy of Data Collection - Sheet1.csv', 'import', \Maatwebsite\Excel\Excel::CSV );
+        Excel::import( new AdsImport, 'Copy of Data Collection - Sheet2.csv', 'import', \Maatwebsite\Excel\Excel::CSV );
     }
 }

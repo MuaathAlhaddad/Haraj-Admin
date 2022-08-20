@@ -38,7 +38,7 @@ class AdsImport implements ToCollection, WithHeadingRow
             );
 
             $ad = Ad::create( [
-                'title'       => $row[ 'ad_name' ],
+                'title'       => $row[ 'ad_name' ] ?? 'No Title',
                 'description' => $row[ 'description' ],
                 'price'       => (float)preg_replace( "/[^0-9]/", "", $row[ 'price' ] ),
                 'negotiable'  => (bool)$row[ 'negotiable' ],
