@@ -19,7 +19,7 @@ class AdsImport implements ToCollection, WithHeadingRow
 
     public function collection( Collection $rows )
     {
-        $harajs_id  = Taxonomy::whereType( Taxonomy::TYPE_HARAJS )->pluck( 'id' )->first();
+        $harajs_id = Taxonomy::whereType( Taxonomy::TYPE_HARAJS )->pluck( 'id' )->first();
         $others_id = Taxonomy::whereType( Taxonomy::TYPE_OTHERS )->pluck( 'id' )->first();
         $brands_id = Taxonomy::whereType( Taxonomy::TYPE_BRANDS )->pluck( 'id' )->first();
         $models_id = Taxonomy::whereType( Taxonomy::TYPE_MODELS )->pluck( 'id' )->first();
@@ -31,7 +31,7 @@ class AdsImport implements ToCollection, WithHeadingRow
                 [ 'phone_no' => $row[ 'contact' ] ],
                 [
                     'name'       => $row[ 'shop_name' ],
-                    'password' => Hash::make('password'),
+                    'password'   => Hash::make( 'password' ),
                     'country_id' => 201, //Somalia
                     'state_id'   => $this->getStateId( $row[ 'state' ] )
                 ]
@@ -59,62 +59,85 @@ class AdsImport implements ToCollection, WithHeadingRow
                 ] );
             }
 
+            $related_taxonomies = collect();
+
             if ( $row[ 'suuq' ] )
             {
-                $suuq = TaxonomyContent::create( [
-                    'title'        => $row[ 'suuq' ],
-                    'taxonomy_id'  => $harajs_id,
-                    'published_at' => now(),
-                    'parent_id'    => null,
-                    'lang'         => 'en',
-                    'icon'         => 'fa fa-car'
-                ] );
+                $suuq = TaxonomyContent::updateOrCreate(
+                    [ 'title' => $row[ 'suuq' ] ],
+                    [
+                        'taxonomy_id'  => $harajs_id,
+                        'published_at' => now(),
+                        'parent_id'    => null,
+                        'lang'         => 'en',
+                        'icon'         => 'fa fa-car'
+                    ]
+                );
+
+                $related_taxonomies->push( $suuq->id );
 
                 if ( $row[ 'brand' ] )
                 {
-                    $brand = TaxonomyContent::create( [
-                        'title'        => $row[ 'brand' ],
-                        'taxonomy_id'  => $brands_id,
-                        'published_at' => now(),
-                        'parent_id'    => $suuq->id,
-                        'lang'         => 'en',
-                        'icon'         => 'fa fa-car'
-                    ] );
+                    $brand = TaxonomyContent::updateOrCreate(
+                        [ 'title' => $row[ 'brand' ] ],
+                        [ 'taxonomy_id'  => $brands_id,
+                          'published_at' => now(),
+                          'parent_id'    => $suuq->id,
+                          'lang'         => 'en',
+                          'icon'         => 'fa fa-car'
+                        ]
+                    );
+
+                    $related_taxonomies->push( $brand->id );
+
                 }
 
                 if ( $row[ 'model' ] )
-                    $model = TaxonomyContent::create( [
-                        'title'        => $row[ 'model' ],
-                        'taxonomy_id'  => $models_id,
-                        'published_at' => now(),
-                        'parent_id'    => $brand->id ?? $suuq->id,
-                        'lang'         => 'en',
-                        'icon'         => 'fa fa-car'
-                    ] );
+                    $model = TaxonomyContent::updateOrCreate(
+                        [ 'title' => $row[ 'model' ] ],
+                        [
+                            'taxonomy_id'  => $models_id,
+                            'published_at' => now(),
+                            'parent_id'    => $brand->id ?? $suuq->id,
+                            'lang'         => 'en',
+                            'icon'         => 'fa fa-car'
+                        ]
+                    );
+
+                $related_taxonomies->push( $model->id );
 
                 if ( $row[ 'typeyear' ] )
                 {
-                    TaxonomyContent::create( [
-                        'title'        => $row[ 'typeyear' ],
-                        'taxonomy_id'  => $types_id,
-                        'published_at' => now(),
-                        'parent_id'    => $model->id ?? $brand->id ?? $suuq->id,
-                        'lang'         => 'en',
-                        'icon'         => 'fa fa-car'
-                    ] );
+                    $type_year = TaxonomyContent::updateOrCreate(
+                        [ 'title' => $row[ 'typeyear' ] ],
+                        [
+                            'taxonomy_id'  => $types_id,
+                            'published_at' => now(),
+                            'parent_id'    => $model->id ?? $brand->id ?? $suuq->id,
+                            'lang'         => 'en',
+                            'icon'         => 'fa fa-car'
+                        ]
+                    );
+
+                    $related_taxonomies->push( $type_year->id );
                 }
             } else
             {
-                TaxonomyContent::create( [
-                    'title'        => 'others',
-                    'taxonomy_id'  => $others_id,
-                    'published_at' => now(),
-                    'parent_id'    => null,
-                    'lang'         => 'en',
-                    'icon'         => 'fa fa-car'
-                ] );
+                $others = TaxonomyContent::updateOrCreate(
+                    [ 'title' => 'others' ],
+                    [
+                        'taxonomy_id'  => $others_id,
+                        'published_at' => now(),
+                        'parent_id'    => null,
+                        'lang'         => 'en',
+                        'icon'         => 'fa fa-car'
+                    ]
+                );
+
+                $related_taxonomies->push( $others->id );
             }
 
+            $ad->taxonomyContents()->sync( $related_taxonomies );
         }
     }
 

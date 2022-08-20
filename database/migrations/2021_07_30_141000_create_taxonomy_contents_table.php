@@ -15,7 +15,7 @@ class CreateTaxonomyContentsTable extends Migration
     {
         Schema::create('taxonomy_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->string('description')->nullable();
             $table->foreignId('taxonomy_id')->constrained('taxonomies');
             $table->integer('parent_id')->nullable();

@@ -15,16 +15,16 @@ class TaxonomySeeder extends Seeder
     public function run()
     {
 
-        DB::table('taxonomies')->delete();
+        DB::table( 'taxonomies' )->delete();
         $taxonomies = array(
-            array('id' => 1, 'type' => 'harajs', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 2, 'type' => 'brands', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 3, 'type' => 'types', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 4, 'type' => 'models', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 5, 'type' => 'categories', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 6, 'type' => 'tags', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
-            array('id' => 7, 'type' => 'others', 'parent_id' => null,  'published_at' => now(), 'lang' => 'en'),
+            array( 'type' => 'harajs', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'brands', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'types', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'models', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'categories', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'tags', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
+            array( 'type' => 'others', 'parent_id' => null, 'published_at' => now(), 'lang' => 'en' ),
         );
-        DB::table('taxonomies')->insert($taxonomies);
+        DB::table( 'taxonomies' )->insert( $taxonomies );
     }
 }
